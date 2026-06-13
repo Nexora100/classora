@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="hi">
 <head>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>GyanSetu Academy | Premium E-Learning Portal</title>
   
   <!-- Premium Fonts For Big & Bold Text -->
-  <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Poppins:wght@500;600;700;800;900&amp;display=swap' rel='stylesheet'/>
+  <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap' rel='stylesheet'>
   
-  <b:skin><![CDATA[
+  <style>
     /* ===== RESET & BASE (CLEAN WHITE THEME) ===== */
     :root { 
       --bg-color: #f0f4f8; 
@@ -23,9 +23,6 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); margin: 0; padding: 0; padding-top: 70px; color: var(--text-main); overflow-x: hidden; }
     a { text-decoration: none; }
-    
-    /* ===== NUKING BLOGGER DEFAULTS ===== */
-    .status-msg-wrap, .blog-pager, #blog-pager, .feed-links, .post-footer, .date-header, .post-labels, .home-link { display: none !important; visibility: hidden !important; }
     
     /* ===== TOP GLASS NAVIGATION BAR ===== */
     .glass-top-nav { position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
@@ -67,7 +64,7 @@
     /* ===== MODERN CSS GRID ===== */
     .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
     
-    /* ===== PREMIUM DARK BUTTONS (BIG & BOLD) ===== */
+    /* ===== PREMIUM DARK BUTTONS ===== */
     .feature-card { border-radius: 20px; padding: 45px 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.15); position: relative; overflow: hidden; text-align: center; border: 3px solid transparent; }
     .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 35px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.4); }
     
@@ -223,7 +220,7 @@
       .data-item { flex-direction: column; align-items: flex-start; gap: 20px; }
       .action-btn { width: 100%; text-align: center; padding: 15px 20px; }
     }
-  ]]></b:skin>
+  </style>
 </head>
 <body>
 
@@ -288,7 +285,7 @@
         </div>
       </div>
       
-      <!-- 2. HOME PAGE SUPPORT APPEAL (NEW) -->
+      <!-- 2. HOME PAGE SUPPORT APPEAL -->
       <div class='support-inline-box'>
         <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>
         <p class='support-text'>
@@ -296,11 +293,6 @@
         </p>
         <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>
       </div>
-
-      <!-- Blogger Posts (Hidden if empty) -->
-      <b:section class='main' id='main' showaddelement='yes'>
-        <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' version='1'/>
-      </b:section>
 
       <!-- 3. MAIN STUDY FEATURES -->
       <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>Core Study Materials</h2></div>
@@ -311,7 +303,7 @@
           <p class='card-desc'>अध्याय-वार हस्तलिखित और डिजिटल नोट्स</p>
         </div>
         
-        <a class='feature-card bg-purple' href='https://ncert.nic.in/textbook.php' target='_blank' style='text-decoration: none;'>
+        <a class='feature-card bg-purple' href='https://ncert.nic.in/textbook.php' target='_blank'>
           <div class='card-icon-wrapper' style='color:#fff;'>📚</div>
           <h3 class='card-title'>NCERT Books</h3>
           <p class='card-desc'>नवीनतम पाठ्यक्रम की सभी किताबें (PDF)</p>
@@ -516,10 +508,9 @@
   </footer>
 
   <!-- ============================================== -->
-  <!-- JAVASCRIPT LOGIC (100% CDATA LOCKED & SAFE) -->
+  <!-- JAVASCRIPT LOGIC -->
   <!-- ============================================== -->
-  <script type='text/javascript'>
-    //<![CDATA[
+  <script>
     let currentFeature = "";
     let currentFeatureName = "";
     let currentClass = "";
@@ -534,7 +525,7 @@
         ],
         "Political Science": [
           { book: "समकालीन विश्व राजनीति", chapters: ["दो ध्रुवीयता का अंत", "सत्ता के समकालीन केंद्र", "समकालीन दक्षिण एशिया", "अंतरराष्ट्रीय संगठन", "समकालीन विश्व में सुरक्षा", "पर्यावरण और प्राकृतिक संसाधन", "वैश्वीकरण"] },
-          { book: "स्वतंत्र भारत में राजनीति", chapters: ["राष्ट्र-निर्माण की चुनौतियाँ", "एक दल के प्रभुत्व का दौर", "नियोजित विकास की राजनीति", "भारत विदेश संबंध", "कांग्रेस प्रणाली: चुनौतियाँ", "लोकतांत्रिक व्यवस्था का संकट", "क्षेत्रीय आकांक्षाएँ", "भारतीय राजनीति: नए बदलाव"] }
+          { book: "स्वतंत्र भारत में राजनीति", chapters: ["राष्ट्र-निर्माण की चुनौतियाँ", "एक दल के प्रभुत्व का दौर", "नियोजित विकास की राजनीति", "भारत के विदेश संबंध", "कांग्रेस प्रणाली: चुनौतियाँ", "लोकतांत्रिक व्यवस्था का संकट", "क्षेत्रीय आकांक्षाएँ", "भारतीय राजनीति: नए बदलाव"] }
         ],
         "Geography": [
           { book: "मानव भूगोल के मूल सिद्धांत", chapters: ["मानव भूगोल: प्रकृति एवं विषय क्षेत्र", "विश्व जनसंख्या: वितरण, घनत्व और वृद्धि", "मानव विकास", "प्राथमिक क्रियाएं", "द्वितीयक क्रियाएं", "तृतीयक और चतुर्थ क्रियाकलाप", "परिवहन एवं संचार", "अंतर्राष्ट्रीय व्यापार"] },
@@ -897,8 +888,6 @@
         closeSearch();
       }
     }
-        
-    //]]>
   </script>
 </body>
 </html>
