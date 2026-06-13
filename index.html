@@ -1,866 +1,904 @@
-<?xml version="1.0" encoding="UTF-8" ?>  <!DOCTYPE html>  <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>  
-<head>  
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>  
-  <title>GyanSetu Academy | Premium E-Learning Portal</title>    <!-- Premium Fonts For Big & Bold Text -->    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Poppins:wght@500;600;700;800;900&amp;display=swap' rel='stylesheet'/>  <b:skin><![CDATA[
-/* ===== RESET & BASE (CLEAN WHITE THEME) ===== */
-:root {
---bg-color: #f0f4f8;
---card-bg: #ffffff;
---primary: #2563eb;
---accent: #e11d48;
---text-main: #0f172a;
---glass-bg: rgba(255, 255, 255, 0.85);
-}
-
-* { box-sizing: border-box; }  
-html { scroll-behavior: smooth; }  
-body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); margin: 0; padding: 0; padding-top: 70px; color: var(--text-main); overflow-x: hidden; }  
-a { text-decoration: none; }  
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+  <title>GyanSetu Academy | Premium E-Learning Portal</title>
   
-/* ===== NUKING BLOGGER DEFAULTS ===== */  
-.status-msg-wrap, .blog-pager, #blog-pager, .feed-links, .post-footer, .date-header, .post-labels, .home-link { display: none !important; visibility: hidden !important; }  
+  <!-- Premium Fonts For Big & Bold Text -->
+  <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Poppins:wght@500;600;700;800;900&amp;display=swap' rel='stylesheet'/>
   
-/* ===== TOP GLASS NAVIGATION BAR ===== */  
-.glass-top-nav { position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }  
-.nav-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; color: #0f172a; cursor: pointer; display: flex; align-items: center; gap: 8px; }  
-.nav-logo span { color: #38bdf8; }  
-.nav-actions { display: flex; align-items: center; gap: 10px; }  
-.nav-btn { background: #f1f5f9; color: #334155; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 6px; border: 2px solid #e2e8f0; }  
-.nav-btn:hover { background: #e2e8f0; transform: translateY(-2px); }  
-.nav-btn.btn-donate { background: linear-gradient(135deg, #e11d48, #be123c); color: #fff; border: none; box-shadow: 0 4px 10px rgba(225,29,72,0.3); }  
-.nav-btn.btn-donate:hover { box-shadow: 0 6px 15px rgba(225,29,72,0.5); }  
-
-/* ===== SEARCH OVERLAY ===== */  
-.search-overlay { position: fixed; top: -100%; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.95); backdrop-filter: blur(10px); z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); padding: 20px; }  
-.search-overlay.active { top: 0; }  
-.close-search { position: absolute; top: 30px; right: 30px; font-size: 40px; color: #fff; cursor: pointer; transition: 0.3s; font-weight: 300; }  
-.close-search:hover { color: #e11d48; transform: rotate(90deg); }  
-.search-input-box { width: 100%; max-width: 600px; position: relative; }  
-.search-input-box input { width: 100%; background: transparent; border: none; border-bottom: 3px solid #38bdf8; font-size: 30px; color: #fff; font-family: 'Poppins', sans-serif; font-weight: 700; padding: 15px 0; outline: none; }  
-.search-input-box input::placeholder { color: rgba(255,255,255,0.3); }  
-.search-hint { color: #94a3b8; margin-top: 20px; font-weight: 500; text-align: center; }  
-
-/* ===== TOP TICKER BAR ===== */  
-.news-ticker { background: #020617; color: #38bdf8; padding: 12px 15px; font-size: 16px; font-weight: 700; display: flex; align-items: center; border-bottom: 3px solid var(--accent); }  
-.ticker-label { background: var(--accent); color: #fff; padding: 5px 15px; border-radius: 4px; font-family: 'Montserrat', sans-serif; font-weight: 900; margin-right: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }  
-  
-/* ===== PREMIUM HEADER BANNER ===== */  
-.premium-banner { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); padding: 50px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-bottom: 5px solid #38bdf8; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }  
-.header-content { display: flex; flex-direction: column; align-items: center; gap: 5px; }  
-.brand-title { font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 900; color: #ffffff; margin: 0; line-height: 1.1; letter-spacing: -1px; }  
-.brand-title span { color: #38bdf8; }  
-.brand-subtitle { font-size: 16px; color: #94a3b8; margin: 5px 0 0 0; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; }  
-  
-/* ===== MAIN LAYOUT CONTAINERS ===== */  
-.main-wrapper { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }  
-.section-title-box { display: flex; align-items: center; margin-bottom: 25px; border-bottom: 2px solid #cbd5e1; padding-bottom: 12px; }  
-.section-title { font-family: 'Montserrat', sans-serif; font-size: 24px; color: var(--text-main); font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin: 0; }  
-.section-dot { width: 14px; height: 14px; background: var(--primary); border-radius: 50%; margin-right: 15px; }  
-  
-/* ===== MODERN CSS GRID ===== */  
-.dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }  
-  
-/* ===== PREMIUM DARK BUTTONS (BIG & BOLD) ===== */  
-.feature-card { border-radius: 20px; padding: 45px 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.15); position: relative; overflow: hidden; text-align: center; border: 3px solid transparent; }  
-.feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 35px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.4); }  
-  
-.card-icon-wrapper { font-size: 55px; margin-bottom: 15px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); }  
-.card-title { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; margin: 0 0 12px 0; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }  
-.card-desc { font-size: 15px; color: #f8fafc; font-weight: 600; margin: 0; background: rgba(0,0,0,0.4); padding: 8px 20px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); }  
-
-/* EXACT DARK PREMIUM GRADIENTS */  
-.bg-main-notes { background: linear-gradient(135deg, #1e293b, #0f172a); }   
-.bg-purple { background: linear-gradient(135deg, #6d28d9, #4c1d95); }   
-.bg-sol { background: linear-gradient(135deg, #be123c, #831843); }   
-.bg-video { background: linear-gradient(135deg, #047857, #064e3b); }   
-.bg-pyq { background: linear-gradient(135deg, #b45309, #7c2d12); }   
-.bg-imp { background: linear-gradient(135deg, #1e3a8a, #172554); }   
-.bg-mcq { background: linear-gradient(135deg, #0284c7, #0369a1); border: 2px solid #38bdf8; }   
-.bg-coach { background: linear-gradient(135deg, #b91c1c, #7f1d1d); border: 2px solid #fca5a5; }  
-.bg-top { background: linear-gradient(135deg, #166534, #14532d); border: 2px solid #86efac; }  
-.subj-hin { background: linear-gradient(135deg, #7f1d1d, #450a0a); }  
-.subj-eng { background: linear-gradient(135deg, #1e293b, #0f172a); }  
-.subj-san { background: linear-gradient(135deg, #4c1d95, #3b0764); }  
-.subj-hist { background: linear-gradient(135deg, #4c1d95, #3b0764); }  
-.subj-pol { background: linear-gradient(135deg, #1d4ed8, #1e3a8a); }  
-.subj-geo { background: linear-gradient(135deg, #047857, #064e3b); }  
-.subj-socio { background: linear-gradient(135deg, #b45309, #78350f); }  
-.subj-eco { background: linear-gradient(135deg, #be123c, #881337); }  
-.subj-ped { background: linear-gradient(135deg, #0f766e, #115e59); }  
-
-/* ===== DIGITAL NOTICE BOARD ===== */  
-.digital-board { background: #0f172a; border-radius: 16px; padding: 35px; margin-bottom: 30px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border: 4px solid #1e293b; position: relative; }  
-.digital-board-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; border-bottom: 2px dashed #334155; padding-bottom: 15px; }  
-.digital-icon { font-size: 35px; background: #e11d48; padding: 12px; border-radius: 12px; box-shadow: 0 0 15px rgba(225,29,72,0.5); }  
-.digital-title { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; margin: 0; color: #f8fafc; text-transform: uppercase; letter-spacing: 1px; }  
-.digital-content { font-size: 16px; line-height: 1.9; color: #e2e8f0; font-weight: 500; }  
-.digital-content p { margin-bottom: 15px; }  
-.highlight-box { background: rgba(37,99,235,0.1); border-left: 5px solid #38bdf8; padding: 18px; border-radius: 0 10px 10px 0; margin-top: 20px; font-weight: 700; font-size: 17px; color: #38bdf8; }  
-
-/* ===== YOUTUBE BANNER ===== */  
-.yt-banner { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); border-radius: 20px; padding: 45px 30px; color: #fff; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 50px; box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3); border: 3px solid #fca5a5; }  
-.yt-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; margin: 0 0 15px 0; }  
-.yt-desc { font-size: 17px; font-weight: 600; margin: 0 0 30px 0; max-width: 800px; line-height: 1.6; }  
-.yt-btn-group { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }  
-.yt-btn-link { background: #ffffff; color: #dc2626; padding: 15px 35px; border-radius: 30px; font-weight: 800; font-size: 18px; transition: 0.3s; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }  
-.yt-btn-link:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }  
-
-/* ===== DYNAMIC APP SCREENS ===== */  
-.app-screen { display: none; animation: fadeUp 0.4s ease forwards; }  
-.app-screen.active { display: block; }  
-@keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }  
-
-/* APP NAVIGATION BAR */  
-.app-nav { display: flex; align-items: center; justify-content: space-between; background: #ffffff; padding: 25px 30px; border-radius: 20px; margin-bottom: 45px; border: 2px solid #e2e8f0; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }  
-.back-btn-ui { display: flex; align-items: center; gap: 12px; background: #e2e8f0; font-size: 18px; font-weight: 800; color: var(--text-main); cursor: pointer; transition: 0.3s; padding: 15px 30px; border-radius: 40px; border: 2px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-transform: uppercase; }  
-.back-btn-ui:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: translateX(-5px); }  
-.app-title-ui { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900; color: var(--text-main); text-transform: uppercase; }  
-
-/* CLASS SELECTION CARDS */  
-.class-pick-container { display: flex; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap; }  
-.class-card-ui { flex: 1; min-width: 300px; max-width: 420px; background: #fff; border: 2px solid var(--border-color); border-radius: 24px; padding: 50px 30px; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 15px 30px rgba(0,0,0,0.1); color: #fff; border: 4px solid transparent; }  
-.class-card-ui:hover { transform: translateY(-10px); box-shadow: 0 25px 45px rgba(0,0,0,0.25); }  
-.class-12 { background: linear-gradient(135deg, #e11d48, #9f1239); border-color: #fda4af; }  
-.class-11 { background: linear-gradient(135deg, #2563eb, #1e3a8a); border-color: #93c5fd; }  
-.class-num { font-family: 'Montserrat', sans-serif; font-size: 50px; font-weight: 900; margin: 15px 0 10px 0; }  
-.class-desc { font-size: 22px; font-weight: 700; margin: 0; }  
-
-/* LISTING CARDS (CHAPTERS) */  
-.module-header { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; color: #ffffff; background: #0f172a; margin: 50px 0 25px 0; padding: 20px 25px; border-radius: 12px; border-left: 8px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }  
-.data-list { display: flex; flex-direction: column; gap: 20px; }  
-.data-item { display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 30px 35px; border-radius: 16px; border: 2px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.04); border-left: 8px solid var(--primary); }  
-.data-item:hover { border-color: var(--primary); background: #f8fafc; transform: translateX(8px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }  
-  
-.data-info { display: flex; flex-direction: column; gap: 8px; }  
-.data-meta { font-size: 16px; font-weight: 900; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }  
-.data-name { font-size: 22px; font-weight: 800; color: var(--text-main); }  
-  
-.action-btn { background: #f1f5f9; color: var(--text-secondary); padding: 15px 30px; border-radius: 40px; font-size: 16px; font-weight: 900; cursor: pointer; transition: 0.3s; border: 2px solid #cbd5e1; }  
-.action-btn.active-dl { background: var(--primary); color: #fff; box-shadow: 0 5px 15px rgba(37,99,235,0.4); border-color: var(--primary); }  
-.action-btn.active-dl:hover { background: #1e40af; transform: scale(1.05); }  
-.action-btn.ncert-dl { background: #0ea5e9; color: #fff; box-shadow: 0 5px 15px rgba(14,165,233,0.4); border-color: #0ea5e9; }  
-.action-btn.ncert-dl:hover { background: #0369a1; transform: scale(1.05); }  
-
-/* ===== DONATION & SUPPORT UI ===== */  
-.support-inline-box { background: linear-gradient(135deg, #fff1f2, #ffe4e6); border: 2px solid #fda4af; border-radius: 20px; padding: 30px; margin-bottom: 50px; box-shadow: 0 15px 30px rgba(225,29,72,0.1); border-left: 8px solid #e11d48; display: flex; flex-direction: column; gap: 15px; position: relative; overflow: hidden; }  
-.support-inline-box::after { content: '💖'; position: absolute; right: -20px; top: -20px; font-size: 120px; opacity: 0.05; }  
-.support-title { color: #e11d48; font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900; margin: 0; display:flex; align-items:center; gap:10px; text-transform: uppercase; letter-spacing: 1px; }  
-.support-text { color: #4c0519; font-size: 17px; font-weight: 600; line-height: 1.7; margin: 0; z-index: 2; position: relative; }  
-.support-btn-small { background: #e11d48; color: #fff; border: none; padding: 15px 30px; border-radius: 40px; font-weight: 800; font-size: 16px; cursor: pointer; box-shadow: 0 8px 20px rgba(225,29,72,0.3); align-self: flex-start; transition: 0.3s; text-transform: uppercase; z-index: 2; position: relative; }  
-.support-btn-small:hover { background: #be123c; transform: translateY(-3px); box-shadow: 0 12px 25px rgba(225,29,72,0.5); }  
-
-.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2,6,23,0.9); backdrop-filter: blur(10px); z-index: 3000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; padding: 20px; }  
-.modal-overlay.show { display: flex; opacity: 1; }  
-
-.donation-modal { background: #fff; width: 100%; max-width: 550px; border-radius: 30px; padding: 40px 35px; text-align: center; position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.3); transform: translateY(30px) scale(0.95); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 5px solid #f1f5f9; max-height: 90vh; overflow-y: auto; }  
-.modal-overlay.show .donation-modal { transform: translateY(0) scale(1); }  
-
-.close-modal { position: absolute; top: 20px; right: 25px; font-size: 35px; font-weight: 900; color: #94a3b8; cursor: pointer; transition: 0.3s; line-height: 1; }  
-.close-modal:hover { color: #e11d48; transform: rotate(90deg); }  
-
-.modal-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: #0f172a; margin: 0 0 10px 0; }  
-.modal-title span { color: #e11d48; }  
-
-.modal-msg { font-size: 16px; color: #334155; font-weight: 600; line-height: 1.8; margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 16px; border-left: 6px solid var(--primary); text-align: left; }  
-
-.qr-wrapper { background: #f1f5f9; padding: 25px; border-radius: 20px; display: inline-block; margin-bottom: 25px; border: 3px dashed #cbd5e1; width: 100%; }  
-.qr-img-box { width: 220px; height: 220px; background: #fff; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; color: #64748b; margin: 0 auto; overflow: hidden; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }  
-.qr-img-box img { width: 100%; height: 100%; object-fit: cover; }  
-
-.upi-info { background: #0f172a; color: #fff; padding: 15px 25px; border-radius: 15px; font-weight: 700; font-size: 18px; margin-top: 20px; display: flex; flex-direction: column; gap: 5px; }  
-.upi-number { font-family: 'Montserrat', sans-serif; font-size: 26px; color: #38bdf8; font-weight: 900; letter-spacing: 2px; }  
-
-.amount-pills { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }  
-.amt-pill { background: #ffffff; color: var(--accent); border: 2px solid var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 900; font-size: 18px; cursor: default; }  
-
-/* ===== PROFESSIONAL CONTACT FOOTER ===== */  
-.pro-footer { background: #020617; padding: 60px 20px 40px 20px; text-align: center; border-top: 6px solid var(--primary); margin-top: 60px; color: #cbd5e1; }  
-  
-.creator-tag { font-size: 20px; margin: 0 0 10px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; }  
-  
-.huge-creator-name {   
-  font-size: 75px;   
-  font-weight: 900;   
-  font-family: 'Montserrat', sans-serif;  
-  background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc, #f472b6);   
-  -webkit-background-clip: text;   
-  -webkit-text-fill-color: transparent;   
-  margin: 0 0 10px 0;   
-  text-transform: uppercase;   
-  letter-spacing: 4px;  
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));  
-}  
-  
-.footer-brand { font-family: 'Montserrat', sans-serif; font-size: 32px; color: #fff; font-weight: 900; margin: 0 0 40px 0; }  
-.footer-brand span { color: #38bdf8; }  
-  
-.contact-details { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }  
-.contact-pill { background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 40px; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px; color: #fff; transition: 0.3s; }  
-.contact-pill:hover { background: rgba(255,255,255,0.1); border-color: var(--primary); }  
-  
-.copyright { color: #475569; font-size: 15px; font-weight: 600; margin: 0; }  
-
-/* ===== MOBILE RESPONSIVE ===== */  
-@media (max-width: 768px) {  
-  .glass-top-nav { padding: 0 15px; }  
-  .nav-logo { font-size: 18px; }  
-  .nav-btn span { display: none; }  
-  .brand-title { font-size: 38px; }  
-  .huge-creator-name { font-size: 45px; }  
-  .dashboard-grid { grid-template-columns: 1fr; gap: 20px; }  
-  .feature-card { padding: 35px 20px; }  
-  .class-pick-container { flex-direction: column; gap: 25px; }  
-  .class-card-ui { max-width: 100%; padding: 40px 20px; }  
-  .app-nav { flex-direction: column; gap: 20px; text-align: center; }  
-  .back-btn-ui { width: 100%; justify-content: center; font-size: 18px; padding: 18px 20px; }  
-  .data-item { flex-direction: column; align-items: flex-start; gap: 20px; }  
-  .action-btn { width: 100%; text-align: center; padding: 15px 20px; }  
-}
-
-]]></b:skin>
-
-</head>  
-<body>    <!-- TOP GLASS NAVIGATION BAR -->    <nav class="glass-top-nav">  
-    <div class="nav-logo" onclick="goHome()">  
-      GyanSetu <span>Academy</span>  
-    </div>  
-    <div class="nav-actions">  
-      <button class="nav-btn" onclick="goHome()">🏠 <span>Home</span></button>  
-      <button class="nav-btn" onclick="openSearch()">🔍 <span>Search</span></button>  
-      <button class="nav-btn btn-donate" onclick="openDonation()">💖 <span>Support Us</span></button>  
-    </div>  
-  </nav>    <!-- SEARCH OVERLAY -->    <div class="search-overlay" id="search-overlay">  
-    <div class="close-search" onclick="closeSearch()">&#215;</div>  
-    <div class="search-input-box">  
-      <input type="text" placeholder="Search Chapters, Subjects..." id="search-input" onkeyup="handleSearch(event)" />  
-    </div>  
-    <p class="search-hint">Type your query and press Enter</p>  
-  </div>    <!-- TICKER BAR -->    <div class='news-ticker'>  
-    <div class='ticker-label'>Latest Update</div>  
-    <marquee behavior='scroll' direction='left' scrollamount='5'>  
-      GyanSetu Academy में आपका स्वागत है! | ताज़ा अपडेट: Class 12th History (Book 1, 2, 3) और Political Science (Book 1) के सभी Notes उपलब्ध हैं!  
-    </marquee>  
-  </div>    <!-- PREMIUM BANNER -->    <header class='premium-banner'>  
-    <div class='header-content'>  
-      <h1 class='brand-title'>GyanSetu <span>Academy</span></h1>  
-      <p class='brand-subtitle'>Premium Humanities Portal</p>  
-    </div>  
-  </header>    <div class='main-wrapper'>  <!-- ============================================== -->  
-<!-- SCREEN 1: HOME DASHBOARD -->  
-<!-- ============================================== -->  
-<div id='screen-home' class='app-screen active'>  
+  <b:skin><![CDATA[
+    /* ===== RESET & BASE (CLEAN WHITE THEME) ===== */
+    :root { 
+      --bg-color: #f0f4f8; 
+      --card-bg: #ffffff; 
+      --primary: #2563eb; 
+      --accent: #e11d48; 
+      --text-main: #0f172a; 
+      --glass-bg: rgba(255, 255, 255, 0.85);
+    }
     
-  <!-- 1. DIGITAL NOTICE BOARD -->  
-  <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>Notice Board</h2></div>  
-  <div class='digital-board'>  
-    <div class='digital-board-header'>  
-      <div class='digital-icon'>📢</div>  
-      <h3 class='digital-title'>महत्वपूर्ण सूचना (Important Announcement)</h3>  
-    </div>  
-    <div class='digital-content'>  
-      <p>प्रिय छात्र-छात्राओं, <strong>GyanSetu Academy</strong> (एक डिजिटल लर्निंग प्लेटफॉर्म) में आपका स्वागत है!</p>  
-      <p>मैं <strong>रितेश गुप्ता</strong>, आपकी ही तरह एक छात्र हूँ और इस वेबसाइट पर अकेले काम कर रहा हूँ। मेरा उद्देश्य आप सभी तक बेहतरीन अध्ययन सामग्री (Study Material) मुफ़्त पहुँचाना है। चूँकि मैं सारा काम स्वयं कर रहा हूँ, इसलिए सभी विषयों के नोट्स और PDF अपलोड होने में कुछ हफ्ते या महीने लग सकते हैं।</p>  
-      <p>मेरी पूरी कोशिश रहेगी कि आपकी बोर्ड परीक्षा से पहले History और Political Science का पूरा सिलेबस यहाँ उपलब्ध हो जाए। किसी भी समस्या के लिए आप नीचे दिए गए नंबर या ईमेल पर संपर्क कर सकते हैं। ताज़ा अपडेट्स के लिए हमारे YouTube चैनल्स को ज़रूर Subscribe (सब्सक्राइब) करें!</p>  
-      <div class='highlight-box'>  
-        ताज़ा अपडेट: अभी Class 12th Political Science और History के साथ-साथ Class 11th History के PDF नोट्स सफलतापूर्वक अपलोड कर दिए गए हैं।  
-      </div>  
-    </div>  
-  </div>  
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); margin: 0; padding: 0; padding-top: 70px; color: var(--text-main); overflow-x: hidden; }
+    a { text-decoration: none; }
     
-  <!-- 2. HOME PAGE SUPPORT APPEAL (NEW) -->  
-  <div class='support-inline-box'>  
-    <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>  
-    <p class='support-text'>  
-      प्रिय छात्रों और शिक्षकों, ये सम्पूर्ण अध्ययन सामग्री आपके लिए बिल्कुल फ्री है! मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट और नोट्स बनाता हूँ। वेबसाइट का खर्च और मेहनत जारी रखने के लिए अगर आप सक्षम हैं, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं। आपका एक छोटा सा योगदान मेरे लिए बहुत बड़ा है।  
-    </p>  
-    <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>  
-  </div>  
-
-  <!-- Blogger Posts (Hidden if empty) -->  
-  <b:section class='main' id='main' showaddelement='yes'>  
-    <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' version='1'/>  
-  </b:section>  
-
-  <!-- 3. MAIN STUDY FEATURES -->  
-  <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>Core Study Materials</h2></div>  
-  <div class='dashboard-grid'>  
-    <div class='feature-card bg-main-notes' onclick='openFeature("Notes", "Smart Handwritten Notes")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>✍️</div>  
-      <h3 class='card-title'>Smart Notes</h3>  
-      <p class='card-desc'>अध्याय-वार हस्तलिखित और डिजिटल नोट्स</p>  
-    </div>  
-      
-    <a class='feature-card bg-purple' href='https://ncert.nic.in/textbook.php' target='_blank' style='text-decoration: none;'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>📚</div>  
-      <h3 class='card-title'>NCERT Books</h3>  
-      <p class='card-desc'>नवीनतम पाठ्यक्रम की सभी किताबें (PDF)</p>  
-    </a>  
-
-    <div class='feature-card bg-sol' onclick='openFeature("NCERT Solutions", "NCERT Solutions")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>💡</div>  
-      <h3 class='card-title'>NCERT Solutions</h3>  
-      <p class='card-desc'>पाठ्यपुस्तक के सभी प्रश्नों के सटीक उत्तर</p>  
-    </div>  
-      
-    <div class='feature-card bg-video' onclick='openFeature("Video Lectures", "Chapter Video Lectures")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>📺</div>  
-      <h3 class='card-title'>Video Lectures</h3>  
-      <p class='card-desc'>विस्तृत स्पष्टीकरण के साथ वीडियो कक्षाएं</p>  
-    </div>  
-      
-    <div class='feature-card bg-pyq' onclick='openFeature("PYQ", "Previous Year Question Papers")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>⏳</div>  
-      <h3 class='card-title'>PYQ Papers</h3>  
-      <p class='card-desc'>विगत वर्षों के बोर्ड और प्री-बोर्ड प्रश्न पत्र</p>  
-    </div>  
-      
-    <div class='feature-card bg-imp' onclick='openFeature("Important Q and A", "Important Questions")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>⭐</div>  
-      <h3 class='card-title'>Important Q&amp;A</h3>  
-      <p class='card-desc'>परीक्षा के दृष्टिकोण से महत्वपूर्ण प्रश्न</p>  
-    </div>  
-
-    <div class='feature-card bg-mcq' onclick='openFeature("MCQ", "Most Important MCQs")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>🎯</div>  
-      <h3 class='card-title'>Important MCQs</h3>  
-      <p class='card-desc'>State &amp; CBSE Board MCQs</p>  
-    </div>  
-  </div>  
-
-  <!-- 4. LANGUAGE SECTION -->  
-  <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>Languages &amp; Grammar</h2></div>  
-  <div class='dashboard-grid'>  
-    <div class='feature-card subj-hin' onclick='openFeature("Hindi", "Hindi (Core &amp; Elective)")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>अ</div>  
-      <h3 class='card-title'>Hindi (हिंदी)</h3>  
-      <p class='card-desc'>आरोह, वितान, और अभिव्यक्ति माध्यम</p>  
-    </div>  
-    <div class='feature-card subj-eng' onclick='openFeature("English", "English (Core)")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>A</div>  
-      <h3 class='card-title'>English</h3>  
-      <p class='card-desc'>Flamingo, Vistas &amp; Writing Skills</p>  
-    </div>  
-    <div class='feature-card subj-san' onclick='openFeature("Sanskrit", "Sanskrit (संस्कृत)")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>ॐ</div>  
-      <h3 class='card-title'>Sanskrit</h3>  
-      <p class='card-desc'>भास्वती और शाश्वती साहित्य</p>  
-    </div>  
-  </div>  
-
-  <!-- 5. YOUTUBE BANNER SECTION -->  
-  <div class='yt-banner'>  
-    <h2 class='yt-title'>हमारे आधिकारिक YouTube चैनल्स (Official Channels)</h2>  
-    <p class='yt-desc'>GyanSetu Academy कोई ऑफलाइन कोचिंग नहीं है, बल्कि यह छात्रों की मदद के लिए बनाया गया एक <b>फ्री डिजिटल प्लेटफॉर्म (Free Digital Platform)</b> है। हमारे द्वारा तैयार की गई सभी वीडियो क्लासेज और अध्ययन सामग्री को मुफ्त में एक्सेस करने के लिए हमसे जुड़ें!</p>  
-    <div class='yt-btn-group'>  
-      <a class='yt-btn-link' href='https://youtube.com/@e-boardhumanities?si=EW4dLW2ypWUFGtAB' target='_blank'>  
-        ▶️ E-Board Humanities  
-      </a>  
-      <a class='yt-btn-link' href='https://youtube.com/@vidyasetuhindi?si=Fd8i1-b_6G2I-B1S' target='_blank'>  
-        ▶️ Vidya Setu Hindi  
-      </a>  
-    </div>  
-  </div>  
-
-  <!-- 6. EXCLUSIVE COACHING SECTION -->  
-  <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>GyanSetu Academy Coaching Material</h2></div>  
-  <div class='dashboard-grid'>  
-    <div class='feature-card bg-coach' onclick='openFeature("Coaching Papers", "GyanSetu Coaching Papers")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>📝</div>  
-      <h3 class='card-title'>GyanSetu Papers</h3>  
-      <p class='card-desc'>हमारे कोचिंग सेंटर के विशेष प्रश्न-पत्र</p>  
-    </div>  
-    <div class='feature-card bg-top' onclick='openFeature("Toppers Copies", "Board Toppers Copies")'>  
-      <div class='card-icon-wrapper' style='color:#fff;'>🥇</div>  
-      <h3 class='card-title'>Toppers Copies</h3>  
-      <p class='card-desc'>बोर्ड परीक्षा के टॉपर्स की उत्तर-पुस्तिकाएं</p>  
-    </div>  
-  </div>  
-
-</div>  
-
-<!-- ============================================== -->  
-<!-- SCREEN 2: CLASS SELECTION -->  
-<!-- ============================================== -->  
-<div id='screen-class' class='app-screen'>  
-  <div class='app-nav'>  
-    <div class='back-btn-ui' onclick='goHome()'>⬅ Back to Home</div>  
-    <div class='app-title-ui' id='feature-title'>Feature Name</div>  
-  </div>  
+    /* ===== NUKING BLOGGER DEFAULTS ===== */
+    .status-msg-wrap, .blog-pager, #blog-pager, .feed-links, .post-footer, .date-header, .post-labels, .home-link { display: none !important; visibility: hidden !important; }
     
-  <h2 style="text-align:center; margin-top:50px; color:#0f172a; font-weight:900; font-size:42px; font-family:'Montserrat', sans-serif;">Select Your Class <br/><span style="font-size:24px; color:#e11d48;">(अपनी कक्षा चुनें) 👇</span></h2>  
-  <div class='class-pick-container'>  
-    <div class='class-card-ui class-12' onclick='selectClass(12)'>  
-      <div style="font-size: 60px; margin-bottom: 10px;">🎓</div>  
-      <h2 class='class-num'>Class 12th</h2>  
-      <p class='class-desc' style='color:#fff;'>कक्षा 12 का अध्ययन सामग्री</p>  
-    </div>  
-    <div class='class-card-ui class-11' onclick='selectClass(11)'>  
-      <div style="font-size: 60px; margin-bottom: 10px;">🏫</div>  
-      <h2 class='class-num'>Class 11th</h2>  
-      <p class='class-desc' style='color:#fff;'>कक्षा 11 का अध्ययन सामग्री</p>  
-    </div>  
-  </div>  
-</div>  
+    /* ===== TOP GLASS NAVIGATION BAR ===== */
+    .glass-top-nav { position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; color: #0f172a; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+    .nav-logo span { color: #38bdf8; }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .nav-btn { background: #f1f5f9; color: #334155; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 14px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 6px; border: 2px solid #e2e8f0; }
+    .nav-btn:hover { background: #e2e8f0; transform: translateY(-2px); }
+    .nav-btn.btn-donate { background: linear-gradient(135deg, #e11d48, #be123c); color: #fff; border: none; box-shadow: 0 4px 10px rgba(225,29,72,0.3); }
+    .nav-btn.btn-donate:hover { box-shadow: 0 6px 15px rgba(225,29,72,0.5); }
 
-<!-- ============================================== -->  
-<!-- SCREEN 3: SUBJECT SELECTION -->  
-<!-- ============================================== -->  
-<div id='screen-subjects' class='app-screen'>  
-  <div class='app-nav'>  
-    <div class='back-btn-ui' onclick='goBackToClass()'>⬅ Change Class</div>  
-    <div class='app-title-ui'>Select Subject (Class <span id='disp-class'></span>)</div>  
-  </div>  
+    /* ===== SEARCH OVERLAY ===== */
+    .search-overlay { position: fixed; top: -100%; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.95); backdrop-filter: blur(10px); z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); padding: 20px; }
+    .search-overlay.active { top: 0; }
+    .close-search { position: absolute; top: 30px; right: 30px; font-size: 40px; color: #fff; cursor: pointer; transition: 0.3s; font-weight: 300; }
+    .close-search:hover { color: #e11d48; transform: rotate(90deg); }
+    .search-input-box { width: 100%; max-width: 600px; position: relative; }
+    .search-input-box input { width: 100%; background: transparent; border: none; border-bottom: 3px solid #38bdf8; font-size: 30px; color: #fff; font-family: 'Poppins', sans-serif; font-weight: 700; padding: 15px 0; outline: none; }
+    .search-input-box input::placeholder { color: rgba(255,255,255,0.3); }
+    .search-hint { color: #94a3b8; margin-top: 20px; font-weight: 500; text-align: center; }
 
-  <div class='dashboard-grid' id='subject-grid-container'>  
-    <!-- Subjects injected by JS -->  
-  </div>  
-</div>  
-
-<!-- ============================================== -->  
-<!-- SCREEN 3.5: BOOK SELECTION -->  
-<!-- ============================================== -->  
-<div id='screen-books' class='app-screen'>  
-  <div class='app-nav'>  
-    <div class='back-btn-ui' onclick='goBackToSubjects()'>⬅ Back to Subjects</div>  
-    <div class='app-title-ui'>Select Book (<span id='disp-subj-book'></span>)</div>  
-  </div>  
+    /* ===== TOP TICKER BAR ===== */
+    .news-ticker { background: #020617; color: #38bdf8; padding: 12px 15px; font-size: 16px; font-weight: 700; display: flex; align-items: center; border-bottom: 3px solid var(--accent); }
+    .ticker-label { background: var(--accent); color: #fff; padding: 5px 15px; border-radius: 4px; font-family: 'Montserrat', sans-serif; font-weight: 900; margin-right: 15px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }
     
-  <h2 style="text-align:center; margin-top:30px; color:#0f172a; font-weight:900; font-size:36px; font-family:'Montserrat', sans-serif;">Select TextBook <br/><span style="font-size:20px; color:#e11d48;">(अपनी किताब चुनें) 👇</span></h2>  
-  <div class='dashboard-grid' id='book-grid-container' style='margin-top: 40px;'>  
-    <!-- Books injected by JS -->  
-  </div>  
-</div>  
+    /* ===== PREMIUM HEADER BANNER ===== */
+    .premium-banner { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); padding: 50px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-bottom: 5px solid #38bdf8; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .header-content { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+    .brand-title { font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 900; color: #ffffff; margin: 0; line-height: 1.1; letter-spacing: -1px; }
+    .brand-title span { color: #38bdf8; }
+    .brand-subtitle { font-size: 16px; color: #94a3b8; margin: 5px 0 0 0; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; }
+    
+    /* ===== MAIN LAYOUT CONTAINERS ===== */
+    .main-wrapper { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
+    .section-title-box { display: flex; align-items: center; margin-bottom: 25px; border-bottom: 2px solid #cbd5e1; padding-bottom: 12px; }
+    .section-title { font-family: 'Montserrat', sans-serif; font-size: 24px; color: var(--text-main); font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin: 0; }
+    .section-dot { width: 14px; height: 14px; background: var(--primary); border-radius: 50%; margin-right: 15px; }
+    
+    /* ===== MODERN CSS GRID ===== */
+    .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
+    
+    /* ===== PREMIUM DARK BUTTONS (BIG & BOLD) ===== */
+    .feature-card { border-radius: 20px; padding: 45px 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.15); position: relative; overflow: hidden; text-align: center; border: 3px solid transparent; }
+    .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 35px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.4); }
+    
+    .card-icon-wrapper { font-size: 55px; margin-bottom: 15px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); }
+    .card-title { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; margin: 0 0 12px 0; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    .card-desc { font-size: 15px; color: #f8fafc; font-weight: 600; margin: 0; background: rgba(0,0,0,0.4); padding: 8px 20px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1); }
 
-<!-- ============================================== -->  
-<!-- SCREEN 4: CHAPTERS OR PAPERS LISTING -->  
-<!-- ============================================== -->  
-<div id='screen-chapters' class='app-screen'>  
-  <div class='app-nav'>  
-    <div class='back-btn-ui' id='chapter-back-btn' onclick='switchScreen("screen-books")'>⬅ Go Back</div>  
-    <div class='app-title-ui' id='final-title'>Subject Data</div>  
-  </div>  
-  <div id='chapters-container'></div>  
-</div>
+    /* EXACT DARK PREMIUM GRADIENTS */
+    .bg-main-notes { background: linear-gradient(135deg, #1e293b, #0f172a); } 
+    .bg-purple { background: linear-gradient(135deg, #6d28d9, #4c1d95); } 
+    .bg-sol { background: linear-gradient(135deg, #be123c, #831843); } 
+    .bg-video { background: linear-gradient(135deg, #047857, #064e3b); } 
+    .bg-pyq { background: linear-gradient(135deg, #b45309, #7c2d12); } 
+    .bg-imp { background: linear-gradient(135deg, #1e3a8a, #172554); } 
+    .bg-mcq { background: linear-gradient(135deg, #0284c7, #0369a1); border: 2px solid #38bdf8; } 
+    .bg-coach { background: linear-gradient(135deg, #b91c1c, #7f1d1d); border: 2px solid #fca5a5; }
+    .bg-top { background: linear-gradient(135deg, #166534, #14532d); border: 2px solid #86efac; }
+    .subj-hin { background: linear-gradient(135deg, #7f1d1d, #450a0a); }
+    .subj-eng { background: linear-gradient(135deg, #1e293b, #0f172a); }
+    .subj-san { background: linear-gradient(135deg, #4c1d95, #3b0764); }
+    .subj-hist { background: linear-gradient(135deg, #4c1d95, #3b0764); }
+    .subj-pol { background: linear-gradient(135deg, #1d4ed8, #1e3a8a); }
+    .subj-geo { background: linear-gradient(135deg, #047857, #064e3b); }
+    .subj-socio { background: linear-gradient(135deg, #b45309, #78350f); }
+    .subj-eco { background: linear-gradient(135deg, #be123c, #881337); }
+    .subj-ped { background: linear-gradient(135deg, #0f766e, #115e59); }
 
-  </div> <!-- Main Wrapper End -->    <!-- ============================================== -->    <!-- MODALS (DONATION) -->    <!-- ============================================== -->    <div class="modal-overlay" id="donation-modal-overlay">  
-    <div class="donation-modal">  
-      <div class="close-modal" onclick="closeDonation()">&#215;</div>  
-      <h2 class="modal-title">Support <span>Us</span> 💖</h2>  <div class='modal-msg'>  
-    "प्रिय छात्रों और शिक्षकों 🙏, ये सभी नोट्स आपके लिए बिल्कुल फ्री हैं। मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट और नोट्स बनाता हूँ। वेबसाइट का खर्च और मेहनत जारी रखने के लिए अगर आप सक्षम हैं, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं। आपका एक छोटा सा योगदान मेरे लिए बहुत बड़ा है।"  
-  </div>  
+    /* ===== DIGITAL NOTICE BOARD ===== */
+    .digital-board { background: #0f172a; border-radius: 16px; padding: 35px; margin-bottom: 30px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border: 4px solid #1e293b; position: relative; }
+    .digital-board-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; border-bottom: 2px dashed #334155; padding-bottom: 15px; }
+    .digital-icon { font-size: 35px; background: #e11d48; padding: 12px; border-radius: 12px; box-shadow: 0 0 15px rgba(225,29,72,0.5); }
+    .digital-title { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; margin: 0; color: #f8fafc; text-transform: uppercase; letter-spacing: 1px; }
+    .digital-content { font-size: 16px; line-height: 1.9; color: #e2e8f0; font-weight: 500; }
+    .digital-content p { margin-bottom: 15px; }
+    .highlight-box { background: rgba(37,99,235,0.1); border-left: 5px solid #38bdf8; padding: 18px; border-radius: 0 10px 10px 0; margin-top: 20px; font-weight: 700; font-size: 17px; color: #38bdf8; }
 
-  <div class='amount-pills'>  
-    <div class='amt-pill'>₹ 5</div>  
-    <div class='amt-pill'>₹ 10</div>  
-    <div class='amt-pill'>₹ 20</div>  
-    <div class='amt-pill'>₹ 50</div>  
-    <div class='amt-pill'>₹ 100+</div>  
-  </div>  
+    /* ===== YOUTUBE BANNER ===== */
+    .yt-banner { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); border-radius: 20px; padding: 45px 30px; color: #fff; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 50px; box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3); border: 3px solid #fca5a5; }
+    .yt-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; margin: 0 0 15px 0; }
+    .yt-desc { font-size: 17px; font-weight: 600; margin: 0 0 30px 0; max-width: 800px; line-height: 1.6; }
+    .yt-btn-group { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .yt-btn-link { background: #ffffff; color: #dc2626; padding: 15px 35px; border-radius: 30px; font-weight: 800; font-size: 18px; transition: 0.3s; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .yt-btn-link:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
 
-  <div class='qr-wrapper'>  
-    <p style="font-size: 15px; font-weight: 800; color: #1e293b; margin-top: 0; margin-bottom:15px; text-transform:uppercase;">Scan QR to Support</p>  
-    <div class='qr-img-box'>  
-      <img src="https://drive.google.com/uc?export=view&amp;id=1wUwWxXiZAX6KwXxryzGQx30czNmcZW7q" alt="Support QR Code" onerror="this.src='https://placehold.co/220x220/e2e8f0/64748b?text=QR+Code+Error'"/>  
-    </div>  
+    /* ===== DYNAMIC APP SCREENS ===== */
+    .app-screen { display: none; animation: fadeUp 0.4s ease forwards; }
+    .app-screen.active { display: block; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* APP NAVIGATION BAR */
+    .app-nav { display: flex; align-items: center; justify-content: space-between; background: #ffffff; padding: 25px 30px; border-radius: 20px; margin-bottom: 45px; border: 2px solid #e2e8f0; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .back-btn-ui { display: flex; align-items: center; gap: 12px; background: #e2e8f0; font-size: 18px; font-weight: 800; color: var(--text-main); cursor: pointer; transition: 0.3s; padding: 15px 30px; border-radius: 40px; border: 2px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-transform: uppercase; }
+    .back-btn-ui:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: translateX(-5px); }
+    .app-title-ui { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900; color: var(--text-main); text-transform: uppercase; }
+
+    /* CLASS SELECTION CARDS */
+    .class-pick-container { display: flex; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap; }
+    .class-card-ui { flex: 1; min-width: 300px; max-width: 420px; background: #fff; border: 2px solid var(--border-color); border-radius: 24px; padding: 50px 30px; text-align: center; cursor: pointer; transition: 0.3s; box-shadow: 0 15px 30px rgba(0,0,0,0.1); color: #fff; border: 4px solid transparent; }
+    .class-card-ui:hover { transform: translateY(-10px); box-shadow: 0 25px 45px rgba(0,0,0,0.25); }
+    .class-12 { background: linear-gradient(135deg, #e11d48, #9f1239); border-color: #fda4af; }
+    .class-11 { background: linear-gradient(135deg, #2563eb, #1e3a8a); border-color: #93c5fd; }
+    .class-num { font-family: 'Montserrat', sans-serif; font-size: 50px; font-weight: 900; margin: 15px 0 10px 0; }
+    .class-desc { font-size: 22px; font-weight: 700; margin: 0; }
+
+    /* LISTING CARDS (CHAPTERS) */
+    .module-header { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; color: #ffffff; background: #0f172a; margin: 50px 0 25px 0; padding: 20px 25px; border-radius: 12px; border-left: 8px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+    .data-list { display: flex; flex-direction: column; gap: 20px; }
+    .data-item { display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 30px 35px; border-radius: 16px; border: 2px solid #e2e8f0; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.04); border-left: 8px solid var(--primary); }
+    .data-item:hover { border-color: var(--primary); background: #f8fafc; transform: translateX(8px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+    
+    .data-info { display: flex; flex-direction: column; gap: 8px; }
+    .data-meta { font-size: 16px; font-weight: 900; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+    .data-name { font-size: 22px; font-weight: 800; color: var(--text-main); }
+    
+    .action-btn { background: #f1f5f9; color: var(--text-secondary); padding: 15px 30px; border-radius: 40px; font-size: 16px; font-weight: 900; cursor: pointer; transition: 0.3s; border: 2px solid #cbd5e1; }
+    .action-btn.active-dl { background: var(--primary); color: #fff; box-shadow: 0 5px 15px rgba(37,99,235,0.4); border-color: var(--primary); }
+    .action-btn.active-dl:hover { background: #1e40af; transform: scale(1.05); }
+    .action-btn.ncert-dl { background: #0ea5e9; color: #fff; box-shadow: 0 5px 15px rgba(14,165,233,0.4); border-color: #0ea5e9; }
+    .action-btn.ncert-dl:hover { background: #0369a1; transform: scale(1.05); }
+
+    /* ===== DONATION & SUPPORT UI ===== */
+    .support-inline-box { background: linear-gradient(135deg, #fff1f2, #ffe4e6); border: 2px solid #fda4af; border-radius: 20px; padding: 30px; margin-bottom: 50px; box-shadow: 0 15px 30px rgba(225,29,72,0.1); border-left: 8px solid #e11d48; display: flex; flex-direction: column; gap: 15px; position: relative; overflow: hidden; }
+    .support-inline-box::after { content: '💖'; position: absolute; right: -20px; top: -20px; font-size: 120px; opacity: 0.05; }
+    .support-title { color: #e11d48; font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 900; margin: 0; display:flex; align-items:center; gap:10px; text-transform: uppercase; letter-spacing: 1px; }
+    .support-text { color: #4c0519; font-size: 17px; font-weight: 600; line-height: 1.7; margin: 0; z-index: 2; position: relative; }
+    .support-btn-small { background: #e11d48; color: #fff; border: none; padding: 15px 30px; border-radius: 40px; font-weight: 800; font-size: 16px; cursor: pointer; box-shadow: 0 8px 20px rgba(225,29,72,0.3); align-self: flex-start; transition: 0.3s; text-transform: uppercase; z-index: 2; position: relative; }
+    .support-btn-small:hover { background: #be123c; transform: translateY(-3px); box-shadow: 0 12px 25px rgba(225,29,72,0.5); }
+
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2,6,23,0.9); backdrop-filter: blur(10px); z-index: 3000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; padding: 20px; }
+    .modal-overlay.show { display: flex; opacity: 1; }
+
+    .donation-modal { background: #fff; width: 100%; max-width: 550px; border-radius: 30px; padding: 40px 35px; text-align: center; position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.3); transform: translateY(30px) scale(0.95); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 5px solid #f1f5f9; max-height: 90vh; overflow-y: auto; }
+    .modal-overlay.show .donation-modal { transform: translateY(0) scale(1); }
+
+    .close-modal { position: absolute; top: 20px; right: 25px; font-size: 35px; font-weight: 900; color: #94a3b8; cursor: pointer; transition: 0.3s; line-height: 1; }
+    .close-modal:hover { color: #e11d48; transform: rotate(90deg); }
+
+    .modal-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: #0f172a; margin: 0 0 10px 0; }
+    .modal-title span { color: #e11d48; }
+
+    .modal-msg { font-size: 16px; color: #334155; font-weight: 600; line-height: 1.8; margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 16px; border-left: 6px solid var(--primary); text-align: left; }
+
+    .qr-wrapper { background: #f1f5f9; padding: 25px; border-radius: 20px; display: inline-block; margin-bottom: 25px; border: 3px dashed #cbd5e1; width: 100%; }
+    .qr-img-box { width: 220px; height: 220px; background: #fff; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; color: #64748b; margin: 0 auto; overflow: hidden; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .qr-img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+    .upi-info { background: #0f172a; color: #fff; padding: 15px 25px; border-radius: 15px; font-weight: 700; font-size: 18px; margin-top: 20px; display: flex; flex-direction: column; gap: 5px; }
+    .upi-number { font-family: 'Montserrat', sans-serif; font-size: 26px; color: #38bdf8; font-weight: 900; letter-spacing: 2px; }
+
+    .amount-pills { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+    .amt-pill { background: #ffffff; color: var(--accent); border: 2px solid var(--accent); padding: 10px 25px; border-radius: 30px; font-weight: 900; font-size: 18px; cursor: default; }
+
+    /* ===== PROFESSIONAL CONTACT FOOTER ===== */
+    .pro-footer { background: #020617; padding: 60px 20px 40px 20px; text-align: center; border-top: 6px solid var(--primary); margin-top: 60px; color: #cbd5e1; }
+    
+    .creator-tag { font-size: 20px; margin: 0 0 10px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; }
+    
+    .huge-creator-name { 
+      font-size: 75px; 
+      font-weight: 900; 
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc, #f472b6); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      margin: 0 0 10px 0; 
+      text-transform: uppercase; 
+      letter-spacing: 4px;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+    }
+    
+    .footer-brand { font-family: 'Montserrat', sans-serif; font-size: 32px; color: #fff; font-weight: 900; margin: 0 0 40px 0; }
+    .footer-brand span { color: #38bdf8; }
+    
+    .contact-details { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+    .contact-pill { background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 40px; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px; color: #fff; transition: 0.3s; }
+    .contact-pill:hover { background: rgba(255,255,255,0.1); border-color: var(--primary); }
+    
+    .copyright { color: #475569; font-size: 15px; font-weight: 600; margin: 0; }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .glass-top-nav { padding: 0 15px; }
+      .nav-logo { font-size: 18px; }
+      .nav-btn span { display: none; }
+      .brand-title { font-size: 38px; }
+      .huge-creator-name { font-size: 45px; }
+      .dashboard-grid { grid-template-columns: 1fr; gap: 20px; }
+      .feature-card { padding: 35px 20px; }
+      .class-pick-container { flex-direction: column; gap: 25px; }
+      .class-card-ui { max-width: 100%; padding: 40px 20px; }
+      .app-nav { flex-direction: column; gap: 20px; text-align: center; }
+      .back-btn-ui { width: 100%; justify-content: center; font-size: 18px; padding: 18px 20px; }
+      .data-item { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .action-btn { width: 100%; text-align: center; padding: 15px 20px; }
+    }
+  ]]></b:skin>
+</head>
+<body>
+
+  <!-- TOP GLASS NAVIGATION BAR -->
+  <nav class="glass-top-nav">
+    <div class="nav-logo" onclick="goHome()">
+      GyanSetu <span>Academy</span>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="goHome()">🏠 <span>Home</span></button>
+      <button class="nav-btn" onclick="openSearch()">🔍 <span>Search</span></button>
+      <button class="nav-btn btn-donate" onclick="openDonation()">💖 <span>Support Us</span></button>
+    </div>
+  </nav>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="close-search" onclick="closeSearch()">&#215;</div>
+    <div class="search-input-box">
+      <input type="text" placeholder="Search Chapters, Subjects..." id="search-input" onkeyup="handleSearch(event)" />
+    </div>
+    <p class="search-hint">Type your query and press Enter</p>
+  </div>
+
+  <!-- TICKER BAR -->
+  <div class='news-ticker'>
+    <div class='ticker-label'>Latest Update</div>
+    <marquee behavior='scroll' direction='left' scrollamount='5'>
+      GyanSetu Academy में आपका स्वागत है! | ताज़ा अपडेट: Class 12th History (Book 1, 2, 3) और Political Science (Book 1) के सभी Notes उपलब्ध हैं!
+    </marquee>
+  </div>
+
+  <!-- PREMIUM BANNER -->
+  <header class='premium-banner'>
+    <div class='header-content'>
+      <h1 class='brand-title'>GyanSetu <span>Academy</span></h1>
+      <p class='brand-subtitle'>Premium Humanities Portal</p>
+    </div>
+  </header>
+
+  <div class='main-wrapper'>
+
+    <!-- ============================================== -->
+    <!-- SCREEN 1: HOME DASHBOARD -->
+    <!-- ============================================== -->
+    <div id='screen-home' class='app-screen active'>
       
-    <div class="upi-info">  
-       <span style="font-size: 14px; color: #94a3b8; font-weight: 600;">Or Pay via PhonePe / GPay / Paytm on:</span>  
-       <span class="upi-number">7004942579</span>  
-    </div>  
-  </div>  
-    
-  <p style="font-size: 13px; color: #64748b; font-weight: 700; margin: 0;">(This is completely voluntary. Notes are always free!)</p>  
-</div>
+      <!-- 1. DIGITAL NOTICE BOARD -->
+      <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>Notice Board</h2></div>
+      <div class='digital-board'>
+        <div class='digital-board-header'>
+          <div class='digital-icon'>📢</div>
+          <h3 class='digital-title'>महत्वपूर्ण सूचना (Important Announcement)</h3>
+        </div>
+        <div class='digital-content'>
+          <p>प्रिय छात्र-छात्राओं, <strong>GyanSetu Academy</strong> (एक डिजिटल लर्निंग प्लेटफॉर्म) में आपका स्वागत है!</p>
+          <p>मैं <strong>रितेश गुप्ता</strong>, आपकी ही तरह एक छात्र हूँ और इस वेबसाइट पर अकेले काम कर रहा हूँ। मेरा उद्देश्य आप सभी तक बेहतरीन अध्ययन सामग्री (Study Material) मुफ़्त पहुँचाना है। चूँकि मैं सारा काम स्वयं कर रहा हूँ, इसलिए सभी विषयों के नोट्स और PDF अपलोड होने में कुछ हफ्ते या महीने लग सकते हैं।</p>
+          <p>मेरी पूरी कोशिश रहेगी कि आपकी बोर्ड परीक्षा से पहले History और Political Science का पूरा सिलेबस यहाँ उपलब्ध हो जाए। किसी भी समस्या के लिए आप नीचे दिए गए नंबर या ईमेल पर संपर्क कर सकते हैं। ताज़ा अपडेट्स के लिए हमारे YouTube चैनल्स को ज़रूर Subscribe (सब्सक्राइब) करें!</p>
+          <div class='highlight-box'>
+            ताज़ा अपडेट: अभी Class 12th Political Science और History के साथ-साथ Class 11th History के PDF नोट्स सफलतापूर्वक अपलोड कर दिए गए हैं।
+          </div>
+        </div>
+      </div>
+      
+      <!-- 2. HOME PAGE SUPPORT APPEAL (NEW) -->
+      <div class='support-inline-box'>
+        <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>
+        <p class='support-text'>
+          प्रिय छात्रों और शिक्षकों, ये सम्पूर्ण अध्ययन सामग्री आपके लिए बिल्कुल फ्री है! मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट और नोट्स बनाता हूँ। वेबसाइट का खर्च और मेहनत जारी रखने के लिए अगर आप सक्षम हैं, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं। आपका एक छोटा सा योगदान मेरे लिए बहुत बड़ा है।
+        </p>
+        <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>
+      </div>
 
-  </div>    <!-- ============================================== -->    <!-- PROFESSIONAL CONTACT FOOTER -->    <!-- ============================================== -->    <footer class='pro-footer'>  
-    <p class='creator-tag'>Designed &amp; Developed By</p>  
-    <div class='huge-creator-name'>RITESH GUPTA</div>  
-    <h2 class='footer-brand' style="margin-top: 15px;">GyanSetu <span>Academy</span></h2>  
-    <div class='contact-details'>  
-      <div class='contact-pill'>📱 WhatsApp: 7004942579</div>  
-      <div class='contact-pill'>📧 riteshgupta807657@gmail.com</div>  
-    </div>  
-    <p class='copyright'>© 2026 GyanSetu Academy &amp; E-Board Humanities. All Rights Reserved (Free For Students).</p>  
-  </footer>    <!-- ============================================== -->    <!-- JAVASCRIPT LOGIC (100% CDATA LOCKED & SAFE) -->    <!-- ============================================== -->    <script type='text/javascript'>  
-    //<![CDATA[  
-    let currentFeature = "";  
-    let currentFeatureName = "";  
-    let currentClass = "";  
-    let currentSubject = "";  
-  
-    const syllabusDB = {  
-      "12": {  
-        "History": [  
-          { book: "भारतीय इतिहास के कुछ विषय - भाग I", chapters: ["ईंटें, मनके तथा अस्थियाँ", "राजा, किसान और नगर", "बंधुत्व, जाति तथा वर्ग", "विचारक, विश्वास और इमारतें"] },  
-          { book: "भारतीय इतिहास के कुछ विषय - भाग II", chapters: ["यात्रियों के नज़रिए", "भक्ति-सूफी परंपराएं", "एक साम्राज्य की राजधानी: विजयनगर", "किसान, ज़मींदार और राज्य"] },  
-          { book: "भारतीय इतिहास के कुछ विषय - भाग III", chapters: ["उपनिवेशवाद और देहात", "विद्रोही और राज", "महात्मा गांधी और राष्ट्रीय आंदोलन", "संविधान का निर्माण"] }  
-        ],  
-        "Political Science": [  
-          { book: "समकालीन विश्व राजनीति", chapters: ["दो ध्रुवीयता का अंत", "सत्ता के समकालीन केंद्र", "समकालीन दक्षिण एशिया", "अंतरराष्ट्रीय संगठन", "समकालीन विश्व में सुरक्षा", "पर्यावरण और प्राकृतिक संसाधन", "वैश्वीकरण"] },  
-          { book: "स्वतंत्र भारत में राजनीति", chapters: ["राष्ट्र-निर्माण की चुनौतियाँ", "एक दल के प्रभुत्व का दौर", "नियोजित विकास की राजनीति", "भारत विदेश संबंध", "कांग्रेस प्रणाली: चुनौतियाँ", "लोकतांत्रिक व्यवस्था का संकट", "क्षेत्रीय आकांक्षाएँ", "भारतीय राजनीति: नए बदलाव"] }  
-        ],  
-        "Geography": [  
-          { book: "मानव भूगोल के मूल सिद्धांत", chapters: ["मानव भूगोल: प्रकृति एवं विषय क्षेत्र", "विश्व जनसंख्या: वितरण, घनत्व और वृद्धि", "मानव विकास", "प्राथमिक क्रियाएं", "द्वितीयक क्रियाएं", "तृतीयक और चतुर्थ क्रियाकलाप", "परिवहन एवं संचार", "अंतर्राष्ट्रीय व्यापार"] },  
-          { book: "भारत: लोग और अर्थव्यवस्था", chapters: ["जनसंख्या: वितरण, घनत्व, वृद्धि", "मानव बस्तियां", "भू-संसाधन तथा कृषि", "जल संसाधन", "खनिज तथा ऊर्जा संसाधन", "भारत के संदर्भ में नियोजन", "परिवहन तथा संचार", "अंतर्राष्ट्रीय व्यापार", "भौगोलिक परिप्रेक्ष्य में चयनित मुद्दे"] }  
-        ],  
-        "Sociology": [  
-          { book: "भारतीय समाज", chapters: ["जनसांख्यिकीय संरचना", "सामाजिक संस्थाएं: निरंतरता एवं परिवर्तन", "बाजार: एक सामाजिक संस्था", "सामाजिक विषमता एवं बहिष्कार", "सांस्कृतिक विविधता की चुनौतियां"] },  
-          { book: "भारत में सामाजिक परिवर्तन", chapters: ["संरचनात्मक परिवर्तन", "सांस्कृतिक परिवर्तन", "भारतीय लोकतंत्र की कहानियां", "ग्रामीण समाज में परिवर्तन", "औद्योगिक समाज में परिवर्तन", "भूमंडलीकरण और सामाजिक परिवर्तन", "जनसंपर्क साधन", "सामाजिक आंदोलन"] }  
-        ],  
-        "Economics": [  
-          { book: "समष्टि अर्थशास्त्र", chapters: ["समष्टि अर्थशास्त्र: एक परिचय", "राष्ट्रीय आय का लेखांकन", "मुद्रा और बैंकिंग", "आय और रोजगार का निर्धारण", "सरकारी बजट", "खुली अर्थव्यवस्था"] },  
-          { book: "भारतीय अर्थव्यवस्था का विकास", chapters: ["स्वतंत्रता की पूर्व संध्या पर अर्थव्यवस्था", "भारतीय अर्थव्यवस्था (1950-1990)", "उदारीकरण, निजीकरण, वैश्वीकरण", "मानव पूँजी निर्माण", "ग्रामीण विकास", "रोजगार", "पर्यावरण और धारणीय विकास"] }  
-        ],  
-        "Physical Education": [  
-          { book: "Physical Education", chapters: ["Management of Sporting Events", "Children and Women in Sports", "Yoga as Preventive measure", "Physical Education for CWSN", "Sports and Nutrition", "Test and Measurement", "Physiology and Injuries", "Biomechanics and Sports", "Psychology and Sports", "Training in Sports"] }  
-        ],  
-        "Hindi": [  
-          { book: "आरोह (भाग 2)", chapters: ["आत्मपरिचय, एक गीत", "पतंग", "कविता के बहाने, बात सीधी थी पर", "कैमरे में बंद अपाहिज", "सहर्ष स्वीकारा है", "उषा", "बादल राग", "भक्तिन", "बाज़ार दर्शन", "काले मेघा पानी दे", "पहलवान की ढोलक", "चार्ली चैप्लिन यानी हम सब", "नमक", "शिरीष के फूल"] },  
-          { book: "वितान (भाग 2)", chapters: ["सिल्वर वैडिंग", "जूझ", "अतीत में दबे पाँव", "डायरी के पन्ने"] },  
-          { book: "अभिव्यक्ति और माध्यम", chapters: ["विभिन्न माध्यमों के लिए लेखन", "पत्रकारीय लेखन", "विशेष लेखन", "कैसे करें कहानी का नाट्य रूपांतरण", "कैसे बनता है रेडियो नाटक", "नए और अप्रत्याशित विषयों पर लेखन"] }  
-        ],  
-        "English": [  
-          { book: "Flamingo", chapters: ["The Last Lesson", "Lost Spring", "Deep Water", "The Rattrap", "Indigo", "Poets and Pancakes", "The Interview", "Going Places", "My Mother at Sixty-six", "Keeping Quiet", "A Thing of Beauty", "A Roadside Stand", "Aunt Jennifer's Tigers"] },  
-          { book: "Vistas", chapters: ["The Third Level", "The Tiger King", "Journey to the end of the Earth", "The Enemy", "On the Face of It", "Memories of Childhood"] }  
-        ],  
-        "Sanskrit": [  
-          { book: "भास्वती (भाग 2)", chapters: ["अनुशासनम्", "न त्वं शोचितुमर्हसि", "मातुराज्ञा गरीयसी", "प्रजानुरञ्जको नृपः", "दौवारिकस्य निष्ठा", "सूक्ति-सौरभम्", "नैकेनापि समं गता वसुमती", "हल्दीघाटी", "मदालसा", "प्रतीक्षा"] },  
-          { book: "शाश्वती (भाग 2)", chapters: ["विद्यामृमश्नुते", "रघुकोत्संवादः", "बालकौतुकम्", "कर्मगौरवम्", "शुकनासोपदेशः", "सूक्तिसुधा", "विक्रमाङ्कदेवचरितम्", "भोजस्य शल्यचिकित्सा"] }  
-        ]  
-      },  
-      "11": {  
-        "History": [  
-          { book: "विश्व इतिहास के कुछ विषय", chapters: ["लेखन कला और शहरी जीवन", "तीन महाद्वीपों में फैला हुआ साम्राज्य", "यायावर साम्राज्य", "तीन वर्ग", "बदलती हुई सांस्कृतिक परंपराएँ", "मूल निवासियों का विस्थापन", "आधुनिकीकरण के रास्ते"] }  
-        ],  
-        "Political Science": [  
-          { book: "भारत का संविधान", chapters: ["संविधान: क्यों और कैसे?", "भारतीय संविधान में अधिकार", "चुनाव और प्रतिनिधित्व", "कार्यपालिका", "विधायिका", "न्यायपालिका", "संघवाद", "स्थानीय शासन"] },  
-          { book: "राजनीतिक सिद्धांत", chapters: ["राजनीतिक सिद्धांत: परिचय", "स्वतंत्रता", "समानता", "सामाजिक न्याय", "अधिकार", "नागरिकता", "राष्ट्रवाद", "धर्मनिरपेक्षता"] }  
-        ],  
-        "Geography": [  
-          { book: "भौतिक भूगोल के मूल सिद्धांत", chapters: ["भूगोल एक विषय के रूप में", "पृथ्वी की उत्पत्ति एवं विकास", "पृथ्वी की आंतरिक संरचना", "महासागरों और महाद्वीपों का वितरण", "खनिज एवं शैल", "भू-आकृतिक प्रक्रियाएं", "भू-आकृतियां तथा उनका विकास", "वायुमंडल", "सौर विकिरण", "विश्व की जलवायु", "महासागरीय जल", "पृथ्वी पर जीवन"] },  
-          { book: "भारत: भौतिक पर्यावरण", chapters: ["भारत: स्थिति", "संरचना तथा भू-आकृति विज्ञान", "अपवाह तंत्र", "जलवायु", "प्राकृतिक वनस्पति", "मृदा", "प्राकृतिक संकट तथा आपदाएं"] }  
-        ],  
-        "Sociology": [  
-          { book: "समाजशास्त्र परिचय", chapters: ["समाजशास्त्र एवं समाज", "समाजशास्त्र में प्रयुक्त शब्दावली", "सामाजिक संस्थाओं को समझना", "संस्कृति तथा समाजीकरण", "समाजशास्त्र - अनुसंधान पद्धतियां"] },  
-          { book: "समाज का बोध", chapters: ["सामाजिक संरचना, स्तरीकरण", "ग्रामीण तथा नगरीय समाज में परिवर्तन", "पर्यावरण और समाज", "पाश्चात्य समाजशास्त्री", "भारतीय समाजशास्त्री"] }  
-        ],  
-        "Economics": [  
-          { book: "सांख्यिकी (Statistics)", chapters: ["परिचय", "आँकड़ों का संग्रह", "आँकड़ों का संगठन", "आँकड़ों का प्रस्तुतीकरण", "केंद्रीय प्रवृत्ति के माप", "परिक्षेपण के माप", "सहसंबंध", "सूचकांक"] },  
-          { book: "व्यष्टि अर्थशास्त्र (Micro)", chapters: ["परिचय", "उपभोक्ता व्यवहार", "उत्पादन तथा लागत", "पूर्ण प्रतिस्पर्धा", "बाजार संतुलन"] }  
-        ],  
-        "Physical Education": [  
-          { book: "Physical Education", chapters: ["Changing Trends and Career", "Olympism", "Yoga", "PE for CWSN", "Physical Fitness", "Test, Measurement and Evaluation", "Fundamentals of Anatomy", "Fundamentals of Kinesiology", "Psychology and Sports", "Training and Doping"] }  
-        ],  
-        "Hindi": [  
-          { book: "आरोह (भाग 1)", chapters: ["नमक का दारोगा", "मियाँ नसीरुद्दीन", "अपू के साथ ढाई साल", "विदाई-संभाषण", "गलता लोहा", "स्पीति में बारिश", "रजनी", "जामुन का पेड़", "भारत माता", "कबीर", "मीरा", "भवानी प्रसाद मिश्र", "त्रिलोचन", "दुष्यंत कुमार", "अक्कमहादेवी", "अवतार सिंह पाश", "निर्मला पुतुल"] },  
-          { book: "वितान (भाग 1)", chapters: ["भारतीय गायिकाओं में बेजोड़: लता मंगेशकर", "राजस्थान की रजत बूँदें", "आलो आँधारि", "भारतीय कलाएँ"] }  
-        ],  
-        "English": [  
-          { book: "Hornbill", chapters: ["The Portrait of a Lady", "A Photograph", "We're Not Afraid to Die", "Discovering Tut", "The Laburnum Top", "The Voice of the Rain", "Childhood", "The Adventure", "Silk Road", "Father to Son"] },  
-          { book: "Snapshots", chapters: ["The Summer of the Beautiful White Horse", "The Address", "Mother's Day", "Birth", "The Tale of Melon City"] }  
-        ],  
-        "Sanskrit": [  
-          { book: "भास्वती (भाग 1)", chapters: ["कुशलप्रशासनम्", "सौवर्णशकटिका", "सूक्तिसुधा", "ऋतुचित्रणम्", "वीरसर्वदमनः", "शुकशावकोदन्तः", "भव्यः सत्याग्रहाश्रमः", "सङ्गीतानुरागी सुब्बण्णः", "वस्त्रविक्रयः", "सद्‌वृत्तमाचरेत्"] }  
-        ]  
-      }  
-    };  
-  
-    function switchScreen(screenId) {  
-      const screens = document.querySelectorAll('.app-screen');  
-      for(let i=0; i<screens.length; i++) {  
-        screens[i].classList.remove('active');  
-      }  
-      document.getElementById(screenId).classList.add('active');  
-      window.scrollTo({ top: 0, behavior: 'smooth' });  
-    }  
-  
-    function goHome() { switchScreen('screen-home'); }  
-          
-    function goBackToClass() {   
-      if(currentFeature === "Coaching Papers" || currentFeature === "Toppers Copies" || currentFeature === "MCQ") {  
-        goHome();  
-      } else {  
-        switchScreen('screen-class');   
-      }  
-    }  
-          
-    function goBackToSubjects() { switchScreen('screen-subjects'); }  
-  
-    function openFeature(featId, featName) {  
-      currentFeature = featId;  
-      currentFeatureName = featName;  
-      document.getElementById('feature-title').innerText = featName;  
-              
-      if(featId === "Coaching Papers" || featId === "Toppers Copies" || featId === "MCQ") {  
-        currentClass = "12";   
-        currentSubject = featId;  
-        renderCoachingPapers();  
-        return;  
-      }  
-              
-      if(featId === "Hindi" || featId === "English" || featId === "Sanskrit") {  
-        currentSubject = featId;  
-      } else {  
-        currentSubject = "";   
-      }  
-      switchScreen('screen-class');  
-    }  
-  
-    function selectClass(cls) {  
-      currentClass = cls;  
-      document.getElementById('disp-class').innerText = currentClass;  
-              
-      if(currentSubject !== "") {  
-        selectSubject(currentSubject);  
-      } else {  
-        renderSubjectsGrid();  
-        switchScreen('screen-subjects');  
-      }  
-    }  
-  
-    function renderSubjectsGrid() {  
-      const grid = document.getElementById('subject-grid-container');  
-      grid.innerHTML = `  
-        <div class='feature-card subj-hist' onclick='selectSubject("History")'>  
-          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🏛️</div>  
-          <h3 class='card-title'>History</h3><p class='card-desc'>इतिहास</p>  
-        </div>  
-        <div class='feature-card subj-pol' onclick='selectSubject("Political Science")'>  
-          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>⚖️</div>  
-          <h3 class='card-title'>Political Science</h3><p class='card-desc'>राजनीति विज्ञान</p>  
-        </div>  
-        <div class='feature-card subj-geo' onclick='selectSubject("Geography")'>  
-          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🌍</div>  
-          <h3 class='card-title'>Geography</h3><p class='card-desc'>भूगोल</p>  
-        </div>  
-        <div class='feature-card subj-socio' onclick='selectSubject("Sociology")'>  
-          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🤝</div>  
-          <h3 class='card-title'>Sociology</h3><p class='card-desc'>समाजशास्त्र</p>  
-        </div>  
-        <div class='feature-card subj-eco' onclick='selectSubject("Economics")'>  
-          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>📈</div>  
-          <h3 class='card-title'>Economics</h3><p class='card-desc'>अर्थशास्त्र</p>  
-        </div>  
-        <div class='feature-card subj-ped' onclick='selectSubject("Physical Education")'>  
-          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🏃‍♂️</div>  
-          <h3 class='card-title'>Physical Ed.</h3><p class='card-desc'>शारीरिक शिक्षा</p>  
-        </div>  
-      `;  
-    }  
-  
-    function selectSubject(subject) {  
-      currentSubject = subject;  
-  
-      if (currentFeature === "PYQ") {  
-        openChaptersDirectlyForPYQ();  
-        return;  
-      }  
-  
-      document.getElementById('disp-subj-book').innerText = subject;  
-      const data = syllabusDB[currentClass][currentSubject];  
-      const grid = document.getElementById('book-grid-container');  
-      grid.innerHTML = "";  
-  
-      if(!data) {  
-        grid.innerHTML = "<h3 style='text-align:center; width:100%; font-size:24px; font-weight:800;'>Data Updating Soon...</h3>";  
-      } else {  
-        const bgClasses = ['bg-purple', 'bg-sol', 'bg-video', 'bg-main-notes'];  
-        for(let i=0; i<data.length; i++) {  
-          let bgClass = bgClasses[i % bgClasses.length];  
-          grid.innerHTML += `  
-            <div class='feature-card ${bgClass}' onclick='openBookChapters(${i})'>  
-              <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>📕</div>  
-              <h3 class='card-title' style='font-size:22px;'>${data[i].book}</h3>  
-              <p class='card-desc'>View Chapters</p>  
-            </div>  
-          `;  
-        }  
-      }  
-  
-      if(subject === "Hindi" || subject === "English" || subject === "Sanskrit") {  
-         document.querySelector('#screen-books .back-btn-ui').setAttribute('onclick', 'goBackToClass()');  
-      } else {  
-         document.querySelector('#screen-books .back-btn-ui').setAttribute('onclick', 'goBackToSubjects()');  
-      }  
-  
-      switchScreen('screen-books');  
-    }  
-  
-    function openBookChapters(bookIndex) {  
-      const bookObj = syllabusDB[currentClass][currentSubject][bookIndex];  
-      document.getElementById('final-title').innerText = bookObj.book + " (" + currentFeature + ")";  
-      const container = document.getElementById('chapters-container');  
+      <!-- Blogger Posts (Hidden if empty) -->
+      <b:section class='main' id='main' showaddelement='yes'>
+        <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' version='1'/>
+      </b:section>
+
+      <!-- 3. MAIN STUDY FEATURES -->
+      <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>Core Study Materials</h2></div>
+      <div class='dashboard-grid'>
+        <div class='feature-card bg-main-notes' onclick='openFeature("Notes", "Smart Handwritten Notes")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>✍️</div>
+          <h3 class='card-title'>Smart Notes</h3>
+          <p class='card-desc'>अध्याय-वार हस्तलिखित और डिजिटल नोट्स</p>
+        </div>
         
-      let html = `  
-        <div class='support-inline-box'>  
-          <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>  
-          <p class='support-text'>  
-            ये सम्पूर्ण नोट्स आपके लिए बिल्कुल फ्री हैं! मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट और नोट्स बनाता हूँ। अगर इस कंटेंट से आपकी मदद हो रही है, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं। आपका छोटा सा योगदान मेरे लिए बहुत बड़ा है।  
-          </p>  
-          <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>  
-        </div>  
-      `;  
-  
-      html += "<div class='module-header'>📘 " + bookObj.book + "</div><div class='data-list'>";  
-  
-      for(let j=0; j<bookObj.chapters.length; j++) {  
-        let chName = bookObj.chapters[j];  
-        let link = '#';  
-        let btnText = 'Pending';  
-        let btnClass = 'action-btn';  
-  
-        if (currentFeature === "NCERT Books") {  
-          link = 'https://ncert.nic.in/textbook.php';  
-          btnText = '🌐 Official PDF';  
-          btnClass = 'action-btn ncert-dl';  
-        }  
-  
-        if (currentFeature === 'Notes' && currentClass == 12 && currentSubject === 'History') {  
-          if (bookIndex === 0) {  
-            if (j === 0) { link = 'https://drive.google.com/file/d/1jEcM6aFgmFfu_er0Vxg8IykVl6I1kAFG/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 1) { link = 'https://drive.google.com/file/d/1Be4dLLDMZljIzbg5Jp766Z8nRCmeh4uO/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 2) { link = 'https://drive.google.com/file/d/1Bjvi1w_UO3omID8rVoG4kLG3nBmKbwuE/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 3) { link = 'https://drive.google.com/file/d/1W2jKpHt6MXvZ-VEftxOviTl4tmSRH2kn/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-          }  
-          else if (bookIndex === 1) {  
-            if (j === 0) { link = 'https://drive.google.com/file/d/1PYBpS72ATDG2qK1zCGjrS6TVZZaSd9zh/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 1) { link = 'https://drive.google.com/file/d/1Yp0lo5M9FTOOpCRX0spCe9KWHA5TKhEf/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 2) { link = 'https://drive.google.com/file/d/1ubxvYhyKtwyPw_bV7D2Z38xktPAY3_zo/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 3) { link = 'https://drive.google.com/file/d/1Do8eCXYddhxHTl3cHoqGTAARADnpvXNW/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-          }  
-          else if (bookIndex === 2) {  
-            if (j === 0) { link = 'https://drive.google.com/file/d/1kUsZtlzPM5-8ltPfHiDt8koSZjTBY_wY/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 1) { link = 'https://drive.google.com/file/d/1AxbsLKjeoO4oba7t2FhMcIZ3e3nv0j0q/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 2) { link = 'https://drive.google.com/file/d/101NX-a1wPvWATsTpEVVOk3JhLY3a5ngU/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 3) { link = 'https://drive.google.com/file/d/1VN6NwpTrppURf2oDOvcL6xeq33QdFIL2/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-          }  
-        }  
-          
-        else if (currentFeature === 'Notes' && currentClass == 12 && currentSubject === 'Political Science') {  
-          if (bookIndex === 0) {  
-            if (j === 0) { link = 'https://drive.google.com/file/d/1P4eatonCUyc2b_CkIUK28dSVHx9yrcEN/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 1) { link = 'https://drive.google.com/file/d/1V1QG3GWzJ8AXPifwrmjAgsnOIz-go62v/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 2) { link = 'https://drive.google.com/file/d/1iHGwf_Q4_eh_BHes6z9KQZkicoi_c4Pj/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 3) { link = 'https://drive.google.com/file/d/1TcA9g0CzL7EoKeptwAPU9aAHDl2NkIcU/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 4) { link = 'https://drive.google.com/file/d/1igDh845m6ptDAKBzuUUoDsBqHdFNpnlk/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 5) { link = 'https://drive.google.com/file/d/1qfU_bPTg8ooDu20vEWYxMSudF_-knm56/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 6) { link = 'https://drive.google.com/file/d/1Wqoxx-7toVkJX0Ga8LXOiv0ByZn-UZY7/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-          }  
-        }  
-          
-        else if (currentFeature === 'Notes' && currentClass == 11 && currentSubject === 'History') {  
-          if (bookIndex === 0) {  
-            if (j === 0) { link = 'https://drive.google.com/file/d/1SocUGPLM67wsQa5qAN-0fIsFnPsPP1Ro/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 1) { link = 'https://drive.google.com/file/d/1EzZC_p7wYqsqzVo3iuqE5Q8GZY5EnHaY/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 2) { link = 'https://drive.google.com/file/d/1ztWcCziEYpSpqX_ymoXFxMsx1I-Ql4y1/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 3) { link = 'https://drive.google.com/file/d/1krhmnXQClNrx-cI7g-OjDSKjCgL308Hv/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 4) { link = 'https://drive.google.com/file/d/194v23WOiSEybF6VxfUY-99ohnY9TuFWy/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 5) { link = 'https://drive.google.com/file/d/1fl_4DYq4L2fK2YLtpnqtOxtvVX-eeOo-/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-            else if (j === 6) { link = 'https://drive.google.com/file/d/1kEGDLfvKgqNYFIfUGg-q_Pdvv5zqAPEz/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }  
-          }  
-        }  
-  
-        html += "<div class='data-item'><div class='data-info'><span class='data-meta'>Chapter " + (j + 1) + "</span><span class='data-name'>" + chName + "</span></div><a href='" + link + "' target='_blank' class='" + btnClass + "'>" + btnText + "</a></div>";  
-      }  
-      html += "</div>";  
-      container.innerHTML = html;  
-  
-      document.getElementById('chapter-back-btn').setAttribute('onclick', 'switchScreen("screen-books")');  
-      switchScreen('screen-chapters');  
-    }  
-  
-    function openChaptersDirectlyForPYQ() {  
-      document.getElementById('final-title').innerText = currentSubject + " (PYQ)";  
-      const container = document.getElementById('chapters-container');  
+        <a class='feature-card bg-purple' href='https://ncert.nic.in/textbook.php' target='_blank' style='text-decoration: none;'>
+          <div class='card-icon-wrapper' style='color:#fff;'>📚</div>
+          <h3 class='card-title'>NCERT Books</h3>
+          <p class='card-desc'>नवीनतम पाठ्यक्रम की सभी किताबें (PDF)</p>
+        </a>
+
+        <div class='feature-card bg-sol' onclick='openFeature("NCERT Solutions", "NCERT Solutions")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>💡</div>
+          <h3 class='card-title'>NCERT Solutions</h3>
+          <p class='card-desc'>पाठ्यपुस्तक के सभी प्रश्नों के सटीक उत्तर</p>
+        </div>
         
-      let pyqHTML = `  
-        <div class='support-inline-box'>  
-          <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>  
-          <p class='support-text'>  
-            ये सम्पूर्ण पेपर्स आपके लिए बिल्कुल फ्री हैं! मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट बनाता हूँ। अगर इस कंटेंट से आपकी मदद हो रही है, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं।  
-          </p>  
-          <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>  
-        </div>  
-      `;  
+        <div class='feature-card bg-video' onclick='openFeature("Video Lectures", "Chapter Video Lectures")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>📺</div>
+          <h3 class='card-title'>Video Lectures</h3>
+          <p class='card-desc'>विस्तृत स्पष्टीकरण के साथ वीडियो कक्षाएं</p>
+        </div>
         
-      pyqHTML += "<div class='module-header'>Previous Year Papers &amp; Sessions</div><div class='data-list'>";  
-      const years = ["2025-26", "2024-25", "2023-24", "2022-23"];  
-      const exams = ["Final Board Exam", "Pre-Board Exam", "Mid-Term Exam"];  
-                
-      for(let y=0; y<years.length; y++) {  
-        for(let e=0; e<exams.length; e++) {  
-          pyqHTML += "<div class='data-item'><div class='data-info'><span class='data-meta' style='color:#e11d48;'>Session " + years[y] + "</span><span class='data-name'>" + exams[e] + "</span></div><button class='action-btn'>Pending</button></div>";  
-        }  
-      }  
-      pyqHTML += "</div>";  
-      container.innerHTML = pyqHTML;  
-                
-      if(currentSubject === "Hindi" || currentSubject === "English" || currentSubject === "Sanskrit") {  
-         document.getElementById('chapter-back-btn').setAttribute('onclick', 'goBackToClass()');  
-      } else {  
-         document.getElementById('chapter-back-btn').setAttribute('onclick', 'goBackToSubjects()');  
-      }  
-                
-      switchScreen('screen-chapters');  
-    }  
-  
-    function renderCoachingPapers() {  
-      document.getElementById('final-title').innerText = currentFeatureName;  
-      const container = document.getElementById('chapters-container');  
-              
-      let html = `  
-        <div class='support-inline-box'>  
-          <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>  
-          <p class='support-text'>  
-            ये प्रीमियम मटेरियल 100% फ्री है। अगर इस कंटेंट से आपकी मदद हो रही है, तो कृपया एक छात्र होने के नाते मेरे काम को सपोर्ट करें। आपका छोटा सा योगदान (₹5, ₹10) बहुत मायने रखता है।  
-          </p>  
-          <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>  
-        </div>  
-      `;  
+        <div class='feature-card bg-pyq' onclick='openFeature("PYQ", "Previous Year Question Papers")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>⏳</div>
+          <h3 class='card-title'>PYQ Papers</h3>
+          <p class='card-desc'>विगत वर्षों के बोर्ड और प्री-बोर्ड प्रश्न पत्र</p>
+        </div>
         
-      html += "<div class='module-header'>Available Content (2026-27)</div><div class='data-list'>";  
-              
-      let exams = ["Mid-Term Examination", "Pre-Board Examination 1", "Pre-Board Examination 2", "Final Board Mock Test"];  
-      if(currentFeature === "Toppers Copies") {  
-         exams = ["History Topper Copy", "Pol Sci Topper Copy", "Geography Topper Copy", "Hindi Topper Copy"];  
-      } else if (currentFeature === "MCQ") {  
-         exams = ["History Mega MCQ Set", "Political Science Top 100 MCQs", "Geography Map Work & MCQs"];  
-      }  
-              
-      for(let i=0; i<exams.length; i++) {  
-        html += "<div class='data-item'><div class='data-info'><span class='data-meta'>Resource " + (i+1) + "</span><span class='data-name'>" + exams[i] + "</span></div><button class='action-btn'>Pending</button></div>";  
-      }  
-      html += "</div>";  
-      container.innerHTML = html;  
-              
-      document.getElementById('chapter-back-btn').setAttribute('onclick', 'goBackToClass()');  
-      switchScreen('screen-chapters');  
-    }  
-  
-    function openDonation() {  
-      document.getElementById('donation-modal-overlay').classList.add('show');  
-    }  
+        <div class='feature-card bg-imp' onclick='openFeature("Important Q and A", "Important Questions")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>⭐</div>
+          <h3 class='card-title'>Important Q&amp;A</h3>
+          <p class='card-desc'>परीक्षा के दृष्टिकोण से महत्वपूर्ण प्रश्न</p>
+        </div>
+
+        <div class='feature-card bg-mcq' onclick='openFeature("MCQ", "Most Important MCQs")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>🎯</div>
+          <h3 class='card-title'>Important MCQs</h3>
+          <p class='card-desc'>State &amp; CBSE Board MCQs</p>
+        </div>
+      </div>
+
+      <!-- 4. LANGUAGE SECTION -->
+      <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>Languages &amp; Grammar</h2></div>
+      <div class='dashboard-grid'>
+        <div class='feature-card subj-hin' onclick='openFeature("Hindi", "Hindi (Core &amp; Elective)")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>अ</div>
+          <h3 class='card-title'>Hindi (हिंदी)</h3>
+          <p class='card-desc'>आरोह, वितान, और अभिव्यक्ति माध्यम</p>
+        </div>
+        <div class='feature-card subj-eng' onclick='openFeature("English", "English (Core)")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>A</div>
+          <h3 class='card-title'>English</h3>
+          <p class='card-desc'>Flamingo, Vistas &amp; Writing Skills</p>
+        </div>
+        <div class='feature-card subj-san' onclick='openFeature("Sanskrit", "Sanskrit (संस्कृत)")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>ॐ</div>
+          <h3 class='card-title'>Sanskrit</h3>
+          <p class='card-desc'>भास्वती और शाश्वती साहित्य</p>
+        </div>
+      </div>
+
+      <!-- 5. YOUTUBE BANNER SECTION -->
+      <div class='yt-banner'>
+        <h2 class='yt-title'>हमारे आधिकारिक YouTube चैनल्स (Official Channels)</h2>
+        <p class='yt-desc'>GyanSetu Academy कोई ऑफलाइन कोचिंग नहीं है, बल्कि यह छात्रों की मदद के लिए बनाया गया एक <b>फ्री डिजिटल प्लेटफॉर्म (Free Digital Platform)</b> है। हमारे द्वारा तैयार की गई सभी वीडियो क्लासेज और अध्ययन सामग्री को मुफ्त में एक्सेस करने के लिए हमसे जुड़ें!</p>
+        <div class='yt-btn-group'>
+          <a class='yt-btn-link' href='https://youtube.com/@e-boardhumanities?si=EW4dLW2ypWUFGtAB' target='_blank'>
+            ▶️ E-Board Humanities
+          </a>
+          <a class='yt-btn-link' href='https://youtube.com/@vidyasetuhindi?si=Fd8i1-b_6G2I-B1S' target='_blank'>
+            ▶️ Vidya Setu Hindi
+          </a>
+        </div>
+      </div>
+
+      <!-- 6. EXCLUSIVE COACHING SECTION -->
+      <div class='section-title-box'><div class='section-dot'></div><h2 class='section-title'>GyanSetu Academy Coaching Material</h2></div>
+      <div class='dashboard-grid'>
+        <div class='feature-card bg-coach' onclick='openFeature("Coaching Papers", "GyanSetu Coaching Papers")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>📝</div>
+          <h3 class='card-title'>GyanSetu Papers</h3>
+          <p class='card-desc'>हमारे कोचिंग सेंटर के विशेष प्रश्न-पत्र</p>
+        </div>
+        <div class='feature-card bg-top' onclick='openFeature("Toppers Copies", "Board Toppers Copies")'>
+          <div class='card-icon-wrapper' style='color:#fff;'>🥇</div>
+          <h3 class='card-title'>Toppers Copies</h3>
+          <p class='card-desc'>बोर्ड परीक्षा के टॉपर्स की उत्तर-पुस्तिकाएं</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SCREEN 2: CLASS SELECTION -->
+    <!-- ============================================== -->
+    <div id='screen-class' class='app-screen'>
+      <div class='app-nav'>
+        <div class='back-btn-ui' onclick='goHome()'>⬅ Back to Home</div>
+        <div class='app-title-ui' id='feature-title'>Feature Name</div>
+      </div>
       
-    function closeDonation() {  
-      document.getElementById('donation-modal-overlay').classList.remove('show');  
-    }  
-  
-    function openSearch() {  
-      document.getElementById('search-overlay').classList.add('active');  
-      document.getElementById('search-input').focus();  
-    }  
-  
-    function closeSearch() {  
-      document.getElementById('search-overlay').classList.remove('active');  
-    }  
-  
-    function handleSearch(event) {  
-      if(event.key === 'Enter') {  
-        alert("Search feature is coming soon! You searched for: " + event.target.value);  
-        closeSearch();  
-      }  
-    }  
-          
-    //]]>  
-  </script>  </body>  
-</html>  
+      <h2 style="text-align:center; margin-top:50px; color:#0f172a; font-weight:900; font-size:42px; font-family:'Montserrat', sans-serif;">Select Your Class <br/><span style="font-size:24px; color:#e11d48;">(अपनी कक्षा चुनें) 👇</span></h2>
+      <div class='class-pick-container'>
+        <div class='class-card-ui class-12' onclick='selectClass(12)'>
+          <div style="font-size: 60px; margin-bottom: 10px;">🎓</div>
+          <h2 class='class-num'>Class 12th</h2>
+          <p class='class-desc' style='color:#fff;'>कक्षा 12 का अध्ययन सामग्री</p>
+        </div>
+        <div class='class-card-ui class-11' onclick='selectClass(11)'>
+          <div style="font-size: 60px; margin-bottom: 10px;">🏫</div>
+          <h2 class='class-num'>Class 11th</h2>
+          <p class='class-desc' style='color:#fff;'>कक्षा 11 का अध्ययन सामग्री</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SCREEN 3: SUBJECT SELECTION -->
+    <!-- ============================================== -->
+    <div id='screen-subjects' class='app-screen'>
+      <div class='app-nav'>
+        <div class='back-btn-ui' onclick='goBackToClass()'>⬅ Change Class</div>
+        <div class='app-title-ui'>Select Subject (Class <span id='disp-class'></span>)</div>
+      </div>
+
+      <div class='dashboard-grid' id='subject-grid-container'>
+        <!-- Subjects injected by JS -->
+      </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SCREEN 3.5: BOOK SELECTION -->
+    <!-- ============================================== -->
+    <div id='screen-books' class='app-screen'>
+      <div class='app-nav'>
+        <div class='back-btn-ui' onclick='goBackToSubjects()'>⬅ Back to Subjects</div>
+        <div class='app-title-ui'>Select Book (<span id='disp-subj-book'></span>)</div>
+      </div>
+      
+      <h2 style="text-align:center; margin-top:30px; color:#0f172a; font-weight:900; font-size:36px; font-family:'Montserrat', sans-serif;">Select TextBook <br/><span style="font-size:20px; color:#e11d48;">(अपनी किताब चुनें) 👇</span></h2>
+      <div class='dashboard-grid' id='book-grid-container' style='margin-top: 40px;'>
+        <!-- Books injected by JS -->
+      </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SCREEN 4: CHAPTERS OR PAPERS LISTING -->
+    <!-- ============================================== -->
+    <div id='screen-chapters' class='app-screen'>
+      <div class='app-nav'>
+        <div class='back-btn-ui' id='chapter-back-btn' onclick='switchScreen("screen-books")'>⬅ Go Back</div>
+        <div class='app-title-ui' id='final-title'>Subject Data</div>
+      </div>
+      <div id='chapters-container'></div>
+    </div>
+
+  </div> <!-- Main Wrapper End -->
+
+  <!-- ============================================== -->
+  <!-- MODALS (DONATION) -->
+  <!-- ============================================== -->
+  <div class="modal-overlay" id="donation-modal-overlay">
+    <div class="donation-modal">
+      <div class="close-modal" onclick="closeDonation()">&#215;</div>
+      <h2 class="modal-title">Support <span>Us</span> 💖</h2>
+      
+      <div class='modal-msg'>
+        "प्रिय छात्रों और शिक्षकों 🙏, ये सभी नोट्स आपके लिए बिल्कुल फ्री हैं। मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट और नोट्स बनाता हूँ। वेबसाइट का खर्च और मेहनत जारी रखने के लिए अगर आप सक्षम हैं, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं। आपका एक छोटा सा योगदान मेरे लिए बहुत बड़ा है।"
+      </div>
+
+      <div class='amount-pills'>
+        <div class='amt-pill'>₹ 5</div>
+        <div class='amt-pill'>₹ 10</div>
+        <div class='amt-pill'>₹ 20</div>
+        <div class='amt-pill'>₹ 50</div>
+        <div class='amt-pill'>₹ 100+</div>
+      </div>
+
+      <div class='qr-wrapper'>
+        <p style="font-size: 15px; font-weight: 800; color: #1e293b; margin-top: 0; margin-bottom:15px; text-transform:uppercase;">Scan QR to Support</p>
+        <div class='qr-img-box'>
+          <img src="https://drive.google.com/uc?export=view&amp;id=1wUwWxXiZAX6KwXxryzGQx30czNmcZW7q" alt="Support QR Code" onerror="this.src='https://placehold.co/220x220/e2e8f0/64748b?text=QR+Code+Error'"/>
+        </div>
+        
+        <div class="upi-info">
+           <span style="font-size: 14px; color: #94a3b8; font-weight: 600;">Or Pay via PhonePe / GPay / Paytm on:</span>
+           <span class="upi-number">7004942579</span>
+        </div>
+      </div>
+      
+      <p style="font-size: 13px; color: #64748b; font-weight: 700; margin: 0;">(This is completely voluntary. Notes are always free!)</p>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- PROFESSIONAL CONTACT FOOTER -->
+  <!-- ============================================== -->
+  <footer class='pro-footer'>
+    <p class='creator-tag'>Designed &amp; Developed By</p>
+    <div class='huge-creator-name'>RITESH GUPTA</div>
+    <h2 class='footer-brand' style="margin-top: 15px;">GyanSetu <span>Academy</span></h2>
+    <div class='contact-details'>
+      <div class='contact-pill'>📱 WhatsApp: 7004942579</div>
+      <div class='contact-pill'>📧 riteshgupta807657@gmail.com</div>
+    </div>
+    <p class='copyright'>© 2026 GyanSetu Academy &amp; E-Board Humanities. All Rights Reserved (Free For Students).</p>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- JAVASCRIPT LOGIC (100% CDATA LOCKED & SAFE) -->
+  <!-- ============================================== -->
+  <script type='text/javascript'>
+    //<![CDATA[
+    let currentFeature = "";
+    let currentFeatureName = "";
+    let currentClass = "";
+    let currentSubject = "";
+
+    const syllabusDB = {
+      "12": {
+        "History": [
+          { book: "भारतीय इतिहास के कुछ विषय - भाग I", chapters: ["ईंटें, मनके तथा अस्थियाँ", "राजा, किसान और नगर", "बंधुत्व, जाति तथा वर्ग", "विचारक, विश्वास और इमारतें"] },
+          { book: "भारतीय इतिहास के कुछ विषय - भाग II", chapters: ["यात्रियों के नज़रिए", "भक्ति-सूफी परंपराएं", "एक साम्राज्य की राजधानी: विजयनगर", "किसान, ज़मींदार और राज्य"] },
+          { book: "भारतीय इतिहास के कुछ विषय - भाग III", chapters: ["उपनिवेशवाद और देहात", "विद्रोही और राज", "महात्मा गांधी और राष्ट्रीय आंदोलन", "संविधान का निर्माण"] }
+        ],
+        "Political Science": [
+          { book: "समकालीन विश्व राजनीति", chapters: ["दो ध्रुवीयता का अंत", "सत्ता के समकालीन केंद्र", "समकालीन दक्षिण एशिया", "अंतरराष्ट्रीय संगठन", "समकालीन विश्व में सुरक्षा", "पर्यावरण और प्राकृतिक संसाधन", "वैश्वीकरण"] },
+          { book: "स्वतंत्र भारत में राजनीति", chapters: ["राष्ट्र-निर्माण की चुनौतियाँ", "एक दल के प्रभुत्व का दौर", "नियोजित विकास की राजनीति", "भारत विदेश संबंध", "कांग्रेस प्रणाली: चुनौतियाँ", "लोकतांत्रिक व्यवस्था का संकट", "क्षेत्रीय आकांक्षाएँ", "भारतीय राजनीति: नए बदलाव"] }
+        ],
+        "Geography": [
+          { book: "मानव भूगोल के मूल सिद्धांत", chapters: ["मानव भूगोल: प्रकृति एवं विषय क्षेत्र", "विश्व जनसंख्या: वितरण, घनत्व और वृद्धि", "मानव विकास", "प्राथमिक क्रियाएं", "द्वितीयक क्रियाएं", "तृतीयक और चतुर्थ क्रियाकलाप", "परिवहन एवं संचार", "अंतर्राष्ट्रीय व्यापार"] },
+          { book: "भारत: लोग और अर्थव्यवस्था", chapters: ["जनसंख्या: वितरण, घनत्व, वृद्धि", "मानव बस्तियां", "भू-संसाधन तथा कृषि", "जल संसाधन", "खनिज तथा ऊर्जा संसाधन", "भारत के संदर्भ में नियोजन", "परिवहन तथा संचार", "अंतर्राष्ट्रीय व्यापार", "भौगोलिक परिप्रेक्ष्य में चयनित मुद्दे"] }
+        ],
+        "Sociology": [
+          { book: "भारतीय समाज", chapters: ["जनसांख्यिकीय संरचना", "सामाजिक संस्थाएं: निरंतरता एवं परिवर्तन", "बाजार: एक सामाजिक संस्था", "सामाजिक विषमता एवं बहिष्कार", "सांस्कृतिक विविधता की चुनौतियां"] },
+          { book: "भारत में सामाजिक परिवर्तन", chapters: ["संरचनात्मक परिवर्तन", "सांस्कृतिक परिवर्तन", "भारतीय लोकतंत्र की कहानियां", "ग्रामीण समाज में परिवर्तन", "औद्योगिक समाज में परिवर्तन", "भूमंडलीकरण और सामाजिक परिवर्तन", "जनसंपर्क साधन", "सामाजिक आंदोलन"] }
+        ],
+        "Economics": [
+          { book: "समष्टि अर्थशास्त्र", chapters: ["समष्टि अर्थशास्त्र: एक परिचय", "राष्ट्रीय आय का लेखांकन", "मुद्रा और बैंकिंग", "आय और रोजगार का निर्धारण", "सरकारी बजट", "खुली अर्थव्यवस्था"] },
+          { book: "भारतीय अर्थव्यवस्था का विकास", chapters: ["स्वतंत्रता की पूर्व संध्या पर अर्थव्यवस्था", "भारतीय अर्थव्यवस्था (1950-1990)", "उदारीकरण, निजीकरण, वैश्वीकरण", "मानव पूँजी निर्माण", "ग्रामीण विकास", "रोजगार", "पर्यावरण और धारणीय विकास"] }
+        ],
+        "Physical Education": [
+          { book: "Physical Education", chapters: ["Management of Sporting Events", "Children and Women in Sports", "Yoga as Preventive measure", "Physical Education for CWSN", "Sports and Nutrition", "Test and Measurement", "Physiology and Injuries", "Biomechanics and Sports", "Psychology and Sports", "Training in Sports"] }
+        ],
+        "Hindi": [
+          { book: "आरोह (भाग 2)", chapters: ["आत्मपरिचय, एक गीत", "पतंग", "कविता के बहाने, बात सीधी थी पर", "कैमरे में बंद अपाहिज", "सहर्ष स्वीकारा है", "उषा", "बादल राग", "भक्तिन", "बाज़ार दर्शन", "काले मेघा पानी दे", "पहलवान की ढोलक", "चार्ली चैप्लिन यानी हम सब", "नमक", "शिरीष के फूल"] },
+          { book: "वितान (भाग 2)", chapters: ["सिल्वर वैडिंग", "जूझ", "अतीत में दबे पाँव", "डायरी के पन्ने"] },
+          { book: "अभिव्यक्ति और माध्यम", chapters: ["विभिन्न माध्यमों के लिए लेखन", "पत्रकारीय लेखन", "विशेष लेखन", "कैसे करें कहानी का नाट्य रूपांतरण", "कैसे बनता है रेडियो नाटक", "नए और अप्रत्याशित विषयों पर लेखन"] }
+        ],
+        "English": [
+          { book: "Flamingo", chapters: ["The Last Lesson", "Lost Spring", "Deep Water", "The Rattrap", "Indigo", "Poets and Pancakes", "The Interview", "Going Places", "My Mother at Sixty-six", "Keeping Quiet", "A Thing of Beauty", "A Roadside Stand", "Aunt Jennifer's Tigers"] },
+          { book: "Vistas", chapters: ["The Third Level", "The Tiger King", "Journey to the end of the Earth", "The Enemy", "On the Face of It", "Memories of Childhood"] }
+        ],
+        "Sanskrit": [
+          { book: "भास्वती (भाग 2)", chapters: ["अनुशासनम्", "न त्वं शोचितुमर्हसि", "मातुराज्ञा गरीयसी", "प्रजानुरञ्जको नृपः", "दौवारिकस्य निष्ठा", "सूक्ति-सौरभम्", "नैकेनापि समं गता वसुमती", "हल्दीघाटी", "मदालसा", "प्रतीक्षा"] },
+          { book: "शाश्वती (भाग 2)", chapters: ["विद्यामृमश्नुते", "रघुकोत्संवादः", "बालकौतुकम्", "कर्मगौरवम्", "शुकनासोपदेशः", "सूक्तिसुधा", "विक्रमाङ्कदेवचरितम्", "भोजस्य शल्यचिकित्सा"] }
+        ]
+      },
+      "11": {
+        "History": [
+          { book: "विश्व इतिहास के कुछ विषय", chapters: ["लेखन कला और शहरी जीवन", "तीन महाद्वीपों में फैला हुआ साम्राज्य", "यायावर साम्राज्य", "तीन वर्ग", "बदलती हुई सांस्कृतिक परंपराएँ", "मूल निवासियों का विस्थापन", "आधुनिकीकरण के रास्ते"] }
+        ],
+        "Political Science": [
+          { book: "भारत का संविधान", chapters: ["संविधान: क्यों और कैसे?", "भारतीय संविधान में अधिकार", "चुनाव और प्रतिनिधित्व", "कार्यपालिका", "विधायिका", "न्यायपालिका", "संघवाद", "स्थानीय शासन"] },
+          { book: "राजनीतिक सिद्धांत", chapters: ["राजनीतिक सिद्धांत: परिचय", "स्वतंत्रता", "समानता", "सामाजिक न्याय", "अधिकार", "नागरिकता", "राष्ट्रवाद", "धर्मनिरपेक्षता"] }
+        ],
+        "Geography": [
+          { book: "भौतिक भूगोल के मूल सिद्धांत", chapters: ["भूगोल एक विषय के रूप में", "पृथ्वी की उत्पत्ति एवं विकास", "पृथ्वी की आंतरिक संरचना", "महासागरों और महाद्वीपों का वितरण", "खनिज एवं शैल", "भू-आकृतिक प्रक्रियाएं", "भू-आकृतियां तथा उनका विकास", "वायुमंडल", "सौर विकिरण", "विश्व की जलवायु", "महासागरीय जल", "पृथ्वी पर जीवन"] },
+          { book: "भारत: भौतिक पर्यावरण", chapters: ["भारत: स्थिति", "संरचना तथा भू-आकृति विज्ञान", "अपवाह तंत्र", "जलवायु", "प्राकृतिक वनस्पति", "मृदा", "प्राकृतिक संकट तथा आपदाएं"] }
+        ],
+        "Sociology": [
+          { book: "समाजशास्त्र परिचय", chapters: ["समाजशास्त्र एवं समाज", "समाजशास्त्र में प्रयुक्त शब्दावली", "सामाजिक संस्थाओं को समझना", "संस्कृति तथा समाजीकरण", "समाजशास्त्र - अनुसंधान पद्धतियां"] },
+          { book: "समाज का बोध", chapters: ["सामाजिक संरचना, स्तरीकरण", "ग्रामीण तथा नगरीय समाज में परिवर्तन", "पर्यावरण और समाज", "पाश्चात्य समाजशास्त्री", "भारतीय समाजशास्त्री"] }
+        ],
+        "Economics": [
+          { book: "सांख्यिकी (Statistics)", chapters: ["परिचय", "आँकड़ों का संग्रह", "आँकड़ों का संगठन", "आँकड़ों का प्रस्तुतीकरण", "केंद्रीय प्रवृत्ति के माप", "परिक्षेपण के माप", "सहसंबंध", "सूचकांक"] },
+          { book: "व्यष्टि अर्थशास्त्र (Micro)", chapters: ["परिचय", "उपभोक्ता व्यवहार", "उत्पादन तथा लागत", "पूर्ण प्रतिस्पर्धा", "बाजार संतुलन"] }
+        ],
+        "Physical Education": [
+          { book: "Physical Education", chapters: ["Changing Trends and Career", "Olympism", "Yoga", "PE for CWSN", "Physical Fitness", "Test, Measurement and Evaluation", "Fundamentals of Anatomy", "Fundamentals of Kinesiology", "Psychology and Sports", "Training and Doping"] }
+        ],
+        "Hindi": [
+          { book: "आरोह (भाग 1)", chapters: ["नमक का दारोगा", "मियाँ नसीरुद्दीन", "अपू के साथ ढाई साल", "विदाई-संभाषण", "गलता लोहा", "स्पीति में बारिश", "रजनी", "जामुन का पेड़", "भारत माता", "कबीर", "मीरा", "भवानी प्रसाद मिश्र", "त्रिलोचन", "दुष्यंत कुमार", "अक्कमहादेवी", "अवतार सिंह पाश", "निर्मला पुतुल"] },
+          { book: "वितान (भाग 1)", chapters: ["भारतीय गायिकाओं में बेजोड़: लता मंगेशकर", "राजस्थान की रजत बूँदें", "आलो आँधारि", "भारतीय कलाएँ"] }
+        ],
+        "English": [
+          { book: "Hornbill", chapters: ["The Portrait of a Lady", "A Photograph", "We're Not Afraid to Die", "Discovering Tut", "The Laburnum Top", "The Voice of the Rain", "Childhood", "The Adventure", "Silk Road", "Father to Son"] },
+          { book: "Snapshots", chapters: ["The Summer of the Beautiful White Horse", "The Address", "Mother's Day", "Birth", "The Tale of Melon City"] }
+        ],
+        "Sanskrit": [
+          { book: "भास्वती (भाग 1)", chapters: ["कुशलप्रशासनम्", "सौवर्णशकटिका", "सूक्तिसुधा", "ऋतुचित्रणम्", "वीरसर्वदमनः", "शुकशावकोदन्तः", "भव्यः सत्याग्रहाश्रमः", "सङ्गीतानुरागी सुब्बण्णः", "वस्त्रविक्रयः", "सद्‌वृत्तमाचरेत्"] }
+        ]
+      }
+    };
+
+    function switchScreen(screenId) {
+      const screens = document.querySelectorAll('.app-screen');
+      for(let i=0; i<screens.length; i++) {
+        screens[i].classList.remove('active');
+      }
+      document.getElementById(screenId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goHome() { switchScreen('screen-home'); }
+        
+    function goBackToClass() { 
+      if(currentFeature === "Coaching Papers" || currentFeature === "Toppers Copies" || currentFeature === "MCQ") {
+        goHome();
+      } else {
+        switchScreen('screen-class'); 
+      }
+    }
+        
+    function goBackToSubjects() { switchScreen('screen-subjects'); }
+
+    function openFeature(featId, featName) {
+      currentFeature = featId;
+      currentFeatureName = featName;
+      document.getElementById('feature-title').innerText = featName;
+            
+      if(featId === "Coaching Papers" || featId === "Toppers Copies" || featId === "MCQ") {
+        currentClass = "12"; 
+        currentSubject = featId;
+        renderCoachingPapers();
+        return;
+      }
+            
+      if(featId === "Hindi" || featId === "English" || featId === "Sanskrit") {
+        currentSubject = featId;
+      } else {
+        currentSubject = ""; 
+      }
+      switchScreen('screen-class');
+    }
+
+    function selectClass(cls) {
+      currentClass = cls;
+      document.getElementById('disp-class').innerText = currentClass;
+            
+      if(currentSubject !== "") {
+        selectSubject(currentSubject);
+      } else {
+        renderSubjectsGrid();
+        switchScreen('screen-subjects');
+      }
+    }
+
+    function renderSubjectsGrid() {
+      const grid = document.getElementById('subject-grid-container');
+      grid.innerHTML = `
+        <div class='feature-card subj-hist' onclick='selectSubject("History")'>
+          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🏛️</div>
+          <h3 class='card-title'>History</h3><p class='card-desc'>इतिहास</p>
+        </div>
+        <div class='feature-card subj-pol' onclick='selectSubject("Political Science")'>
+          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>⚖️</div>
+          <h3 class='card-title'>Political Science</h3><p class='card-desc'>राजनीति विज्ञान</p>
+        </div>
+        <div class='feature-card subj-geo' onclick='selectSubject("Geography")'>
+          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🌍</div>
+          <h3 class='card-title'>Geography</h3><p class='card-desc'>भूगोल</p>
+        </div>
+        <div class='feature-card subj-socio' onclick='selectSubject("Sociology")'>
+          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🤝</div>
+          <h3 class='card-title'>Sociology</h3><p class='card-desc'>समाजशास्त्र</p>
+        </div>
+        <div class='feature-card subj-eco' onclick='selectSubject("Economics")'>
+          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>📈</div>
+          <h3 class='card-title'>Economics</h3><p class='card-desc'>अर्थशास्त्र</p>
+        </div>
+        <div class='feature-card subj-ped' onclick='selectSubject("Physical Education")'>
+          <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>🏃‍♂️</div>
+          <h3 class='card-title'>Physical Ed.</h3><p class='card-desc'>शारीरिक शिक्षा</p>
+        </div>
+      `;
+    }
+
+    function selectSubject(subject) {
+      currentSubject = subject;
+
+      if (currentFeature === "PYQ") {
+        openChaptersDirectlyForPYQ();
+        return;
+      }
+
+      document.getElementById('disp-subj-book').innerText = subject;
+      const data = syllabusDB[currentClass][currentSubject];
+      const grid = document.getElementById('book-grid-container');
+      grid.innerHTML = "";
+
+      if(!data) {
+        grid.innerHTML = "<h3 style='text-align:center; width:100%; font-size:24px; font-weight:800;'>Data Updating Soon...</h3>";
+      } else {
+        const bgClasses = ['bg-purple', 'bg-sol', 'bg-video', 'bg-main-notes'];
+        for(let i=0; i<data.length; i++) {
+          let bgClass = bgClasses[i % bgClasses.length];
+          grid.innerHTML += `
+            <div class='feature-card ${bgClass}' onclick='openBookChapters(${i})'>
+              <div class='card-icon-wrapper' style='color:#fff; font-size:55px;'>📕</div>
+              <h3 class='card-title' style='font-size:22px;'>${data[i].book}</h3>
+              <p class='card-desc'>View Chapters</p>
+            </div>
+          `;
+        }
+      }
+
+      if(subject === "Hindi" || subject === "English" || subject === "Sanskrit") {
+         document.querySelector('#screen-books .back-btn-ui').setAttribute('onclick', 'goBackToClass()');
+      } else {
+         document.querySelector('#screen-books .back-btn-ui').setAttribute('onclick', 'goBackToSubjects()');
+      }
+
+      switchScreen('screen-books');
+    }
+
+    function openBookChapters(bookIndex) {
+      const bookObj = syllabusDB[currentClass][currentSubject][bookIndex];
+      document.getElementById('final-title').innerText = bookObj.book + " (" + currentFeature + ")";
+      const container = document.getElementById('chapters-container');
+      
+      let html = `
+        <div class='support-inline-box'>
+          <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>
+          <p class='support-text'>
+            ये सम्पूर्ण नोट्स आपके लिए बिल्कुल फ्री हैं! मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट और नोट्स बनाता हूँ। अगर इस कंटेंट से आपकी मदद हो रही है, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं। आपका छोटा सा योगदान मेरे लिए बहुत बड़ा है।
+          </p>
+          <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>
+        </div>
+      `;
+
+      html += "<div class='module-header'>📘 " + bookObj.book + "</div><div class='data-list'>";
+
+      for(let j=0; j<bookObj.chapters.length; j++) {
+        let chName = bookObj.chapters[j];
+        let link = '#';
+        let btnText = 'Pending';
+        let btnClass = 'action-btn';
+
+        if (currentFeature === "NCERT Books") {
+          link = 'https://ncert.nic.in/textbook.php';
+          btnText = '🌐 Official PDF';
+          btnClass = 'action-btn ncert-dl';
+        }
+
+        if (currentFeature === 'Notes' && currentClass == 12 && currentSubject === 'History') {
+          if (bookIndex === 0) {
+            if (j === 0) { link = 'https://drive.google.com/file/d/1jEcM6aFgmFfu_er0Vxg8IykVl6I1kAFG/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 1) { link = 'https://drive.google.com/file/d/1Be4dLLDMZljIzbg5Jp766Z8nRCmeh4uO/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 2) { link = 'https://drive.google.com/file/d/1Bjvi1w_UO3omID8rVoG4kLG3nBmKbwuE/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 3) { link = 'https://drive.google.com/file/d/1W2jKpHt6MXvZ-VEftxOviTl4tmSRH2kn/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+          }
+          else if (bookIndex === 1) {
+            if (j === 0) { link = 'https://drive.google.com/file/d/1PYBpS72ATDG2qK1zCGjrS6TVZZaSd9zh/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 1) { link = 'https://drive.google.com/file/d/1Yp0lo5M9FTOOpCRX0spCe9KWHA5TKhEf/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 2) { link = 'https://drive.google.com/file/d/1ubxvYhyKtwyPw_bV7D2Z38xktPAY3_zo/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 3) { link = 'https://drive.google.com/file/d/1Do8eCXYddhxHTl3cHoqGTAARADnpvXNW/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+          }
+          else if (bookIndex === 2) {
+            if (j === 0) { link = 'https://drive.google.com/file/d/1kUsZtlzPM5-8ltPfHiDt8koSZjTBY_wY/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 1) { link = 'https://drive.google.com/file/d/1AxbsLKjeoO4oba7t2FhMcIZ3e3nv0j0q/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 2) { link = 'https://drive.google.com/file/d/101NX-a1wPvWATsTpEVVOk3JhLY3a5ngU/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 3) { link = 'https://drive.google.com/file/d/1VN6NwpTrppURf2oDOvcL6xeq33QdFIL2/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+          }
+        }
+        
+        else if (currentFeature === 'Notes' && currentClass == 12 && currentSubject === 'Political Science') {
+          if (bookIndex === 0) {
+            if (j === 0) { link = 'https://drive.google.com/file/d/1P4eatonCUyc2b_CkIUK28dSVHx9yrcEN/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 1) { link = 'https://drive.google.com/file/d/1V1QG3GWzJ8AXPifwrmjAgsnOIz-go62v/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 2) { link = 'https://drive.google.com/file/d/1iHGwf_Q4_eh_BHes6z9KQZkicoi_c4Pj/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 3) { link = 'https://drive.google.com/file/d/1TcA9g0CzL7EoKeptwAPU9aAHDl2NkIcU/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 4) { link = 'https://drive.google.com/file/d/1igDh845m6ptDAKBzuUUoDsBqHdFNpnlk/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 5) { link = 'https://drive.google.com/file/d/1qfU_bPTg8ooDu20vEWYxMSudF_-knm56/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 6) { link = 'https://drive.google.com/file/d/1Wqoxx-7toVkJX0Ga8LXOiv0ByZn-UZY7/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+          }
+        }
+        
+        else if (currentFeature === 'Notes' && currentClass == 11 && currentSubject === 'History') {
+          if (bookIndex === 0) {
+            if (j === 0) { link = 'https://drive.google.com/file/d/1SocUGPLM67wsQa5qAN-0fIsFnPsPP1Ro/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 1) { link = 'https://drive.google.com/file/d/1EzZC_p7wYqsqzVo3iuqE5Q8GZY5EnHaY/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 2) { link = 'https://drive.google.com/file/d/1ztWcCziEYpSpqX_ymoXFxMsx1I-Ql4y1/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 3) { link = 'https://drive.google.com/file/d/1krhmnXQClNrx-cI7g-OjDSKjCgL308Hv/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 4) { link = 'https://drive.google.com/file/d/194v23WOiSEybF6VxfUY-99ohnY9TuFWy/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 5) { link = 'https://drive.google.com/file/d/1fl_4DYq4L2fK2YLtpnqtOxtvVX-eeOo-/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+            else if (j === 6) { link = 'https://drive.google.com/file/d/1kEGDLfvKgqNYFIfUGg-q_Pdvv5zqAPEz/view?usp=drivesdk'; btnText = 'Download PDF'; btnClass = 'action-btn active-dl'; }
+          }
+        }
+
+        html += "<div class='data-item'><div class='data-info'><span class='data-meta'>Chapter " + (j + 1) + "</span><span class='data-name'>" + chName + "</span></div><a href='" + link + "' target='_blank' class='" + btnClass + "'>" + btnText + "</a></div>";
+      }
+      html += "</div>";
+      container.innerHTML = html;
+
+      document.getElementById('chapter-back-btn').setAttribute('onclick', 'switchScreen("screen-books")');
+      switchScreen('screen-chapters');
+    }
+
+    function openChaptersDirectlyForPYQ() {
+      document.getElementById('final-title').innerText = currentSubject + " (PYQ)";
+      const container = document.getElementById('chapters-container');
+      
+      let pyqHTML = `
+        <div class='support-inline-box'>
+          <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>
+          <p class='support-text'>
+            ये सम्पूर्ण पेपर्स आपके लिए बिल्कुल फ्री हैं! मैं भी आपकी तरह एक मिडिल क्लास छात्र हूँ और रात-रात भर जगकर ये वेबसाइट बनाता हूँ। अगर इस कंटेंट से आपकी मदद हो रही है, तो कृपया अपनी खुशी से <b>₹5, ₹10, ₹20 या ₹100</b>, जितना भी चाहें सपोर्ट (Donate) कर सकते हैं।
+          </p>
+          <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>
+        </div>
+      `;
+      
+      pyqHTML += "<div class='module-header'>Previous Year Papers &amp; Sessions</div><div class='data-list'>";
+      const years = ["2025-26", "2024-25", "2023-24", "2022-23"];
+      const exams = ["Final Board Exam", "Pre-Board Exam", "Mid-Term Exam"];
+              
+      for(let y=0; y<years.length; y++) {
+        for(let e=0; e<exams.length; e++) {
+          pyqHTML += "<div class='data-item'><div class='data-info'><span class='data-meta' style='color:#e11d48;'>Session " + years[y] + "</span><span class='data-name'>" + exams[e] + "</span></div><button class='action-btn'>Pending</button></div>";
+        }
+      }
+      pyqHTML += "</div>";
+      container.innerHTML = pyqHTML;
+              
+      if(currentSubject === "Hindi" || currentSubject === "English" || currentSubject === "Sanskrit") {
+         document.getElementById('chapter-back-btn').setAttribute('onclick', 'goBackToClass()');
+      } else {
+         document.getElementById('chapter-back-btn').setAttribute('onclick', 'goBackToSubjects()');
+      }
+              
+      switchScreen('screen-chapters');
+    }
+
+    function renderCoachingPapers() {
+      document.getElementById('final-title').innerText = currentFeatureName;
+      const container = document.getElementById('chapters-container');
+            
+      let html = `
+        <div class='support-inline-box'>
+          <h4 class='support-title'>🙏 मेरी एक छोटी सी विनती</h4>
+          <p class='support-text'>
+            ये प्रीमियम मटेरियल 100% फ्री है। अगर इस कंटेंट से आपकी मदद हो रही है, तो कृपया एक छात्र होने के नाते मेरे काम को सपोर्ट करें। आपका छोटा सा योगदान (₹5, ₹10) बहुत मायने रखता है।
+          </p>
+          <button class='support-btn-small' onclick='openDonation()'>💖 Support via UPI / QR</button>
+        </div>
+      `;
+      
+      html += "<div class='module-header'>Available Content (2026-27)</div><div class='data-list'>";
+            
+      let exams = ["Mid-Term Examination", "Pre-Board Examination 1", "Pre-Board Examination 2", "Final Board Mock Test"];
+      if(currentFeature === "Toppers Copies") {
+         exams = ["History Topper Copy", "Pol Sci Topper Copy", "Geography Topper Copy", "Hindi Topper Copy"];
+      } else if (currentFeature === "MCQ") {
+         exams = ["History Mega MCQ Set", "Political Science Top 100 MCQs", "Geography Map Work & MCQs"];
+      }
+            
+      for(let i=0; i<exams.length; i++) {
+        html += "<div class='data-item'><div class='data-info'><span class='data-meta'>Resource " + (i+1) + "</span><span class='data-name'>" + exams[i] + "</span></div><button class='action-btn'>Pending</button></div>";
+      }
+      html += "</div>";
+      container.innerHTML = html;
+            
+      document.getElementById('chapter-back-btn').setAttribute('onclick', 'goBackToClass()');
+      switchScreen('screen-chapters');
+    }
+
+    function openDonation() {
+      document.getElementById('donation-modal-overlay').classList.add('show');
+    }
+    
+    function closeDonation() {
+      document.getElementById('donation-modal-overlay').classList.remove('show');
+    }
+
+    function openSearch() {
+      document.getElementById('search-overlay').classList.add('active');
+      document.getElementById('search-input').focus();
+    }
+
+    function closeSearch() {
+      document.getElementById('search-overlay').classList.remove('active');
+    }
+
+    function handleSearch(event) {
+      if(event.key === 'Enter') {
+        alert("Search feature is coming soon! You searched for: " + event.target.value);
+        closeSearch();
+      }
+    }
+        
+    //]]>
+  </script>
+</body>
+</html>
